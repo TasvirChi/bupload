@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Borhan Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Borhan Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,9 +20,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.upload.model
+package com.borhan.upload.model
 {
-	import com.kaltura.KalturaClient;
+	import com.borhan.BorhanClient;
 	
 	import mx.utils.UIDUtil;
 	
@@ -31,7 +31,7 @@ package com.kaltura.upload.model
 	{
 		public static const DEFAULT_UI_CONFIG_ID:String = "2";
 		
-		public var kcwSessionId : String = UIDUtil.createUID(); 
+		public var bcwSessionId : String = UIDUtil.createUID(); 
 		public var userId:String;
 		public var isAnonymous:Boolean;
 		/**
@@ -62,7 +62,7 @@ package com.kaltura.upload.model
 		public var sourceUrl:String;
 		
 		/**
-		 *The hosting server name, e.g. "kaltura.com"
+		 *The hosting server name, e.g. "borhan.com"
 		 */
 		public var hostName:String;
 		
@@ -82,14 +82,14 @@ package com.kaltura.upload.model
 		 * The PS3 - new flex client API
 		 * 
 		 */
-		public var kc:KalturaClient;
+		public var kc:BorhanClient;
 		
 		public var defaultUrlVars:Object;
 		
 		public var permissions:int = -1;
 		
 		/**
-		 * A parameter that's being injected through flashvars and passed with the addentry call [currently, it's not used in the kcw except for passing it]
+		 * A parameter that's being injected through flashvars and passed with the addentry call [currently, it's not used in the bcw except for passing it]
 		 */
 		public var groupId:String;
 		

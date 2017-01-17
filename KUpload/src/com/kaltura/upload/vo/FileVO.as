@@ -1,7 +1,7 @@
-package com.kaltura.upload.vo
+package com.borhan.upload.vo
 {
-	import com.kaltura.net.PolledFileReference;
-	import com.kaltura.vo.importees.UploadStatusTypes;
+	import com.borhan.net.PolledFileReference;
+	import com.borhan.vo.importees.UploadStatusTypes;
 	
 	import flash.events.Event;
 	import flash.events.ProgressEvent;

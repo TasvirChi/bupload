@@ -1,6 +1,6 @@
-package com.kaltura.upload.commands
+package com.borhan.upload.commands
 {
-	import com.kaltura.upload.model.KUploadModelLocator;
+	import com.borhan.upload.model.KUploadModelLocator;
 
 	import flash.events.EventDispatcher;
 

@@ -1,9 +1,9 @@
-package com.kaltura.upload.commands {
-	import com.kaltura.net.PolledFileReference;
-	import com.kaltura.upload.events.KUploadErrorEvent;
-	import com.kaltura.upload.events.KUploadEvent;
-	import com.kaltura.upload.vo.FileFilterVO;
-	import com.kaltura.upload.vo.FileVO;
+package com.borhan.upload.commands {
+	import com.borhan.net.PolledFileReference;
+	import com.borhan.upload.events.KUploadErrorEvent;
+	import com.borhan.upload.events.KUploadEvent;
+	import com.borhan.upload.vo.FileFilterVO;
+	import com.borhan.upload.vo.FileVO;
 	
 	import flash.events.Event;
 	import flash.net.FileFilter;

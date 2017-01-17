@@ -1,21 +1,21 @@
 package {
-	import com.kaltura.upload.commands.AddEntriesCommand;
-	import com.kaltura.upload.commands.AddTagsCommand;
-	import com.kaltura.upload.commands.BaseUploadCommand;
-	import com.kaltura.upload.commands.BrowseCommand;
-	import com.kaltura.upload.commands.InitCommand;
-	import com.kaltura.upload.commands.RemoveFilesCommand;
-	import com.kaltura.upload.commands.SetMediaTypeCommand;
-	import com.kaltura.upload.commands.SetTagsCommand;
-	import com.kaltura.upload.commands.SetTitleCommand;
-	import com.kaltura.upload.commands.StopUploadsCommand;
-	import com.kaltura.upload.commands.UploadCommand;
-	import com.kaltura.upload.commands.ValidateLimitationsCommand;
-	import com.kaltura.upload.controller.KUploadController;
-	import com.kaltura.upload.enums.KUploadStates;
-	import com.kaltura.upload.events.ActionEvent;
-	import com.kaltura.upload.model.KUploadModelLocator;
-	import com.kaltura.upload.vo.FileVO;
+	import com.borhan.upload.commands.AddEntriesCommand;
+	import com.borhan.upload.commands.AddTagsCommand;
+	import com.borhan.upload.commands.BaseUploadCommand;
+	import com.borhan.upload.commands.BrowseCommand;
+	import com.borhan.upload.commands.InitCommand;
+	import com.borhan.upload.commands.RemoveFilesCommand;
+	import com.borhan.upload.commands.SetMediaTypeCommand;
+	import com.borhan.upload.commands.SetTagsCommand;
+	import com.borhan.upload.commands.SetTitleCommand;
+	import com.borhan.upload.commands.StopUploadsCommand;
+	import com.borhan.upload.commands.UploadCommand;
+	import com.borhan.upload.commands.ValidateLimitationsCommand;
+	import com.borhan.upload.controller.KUploadController;
+	import com.borhan.upload.enums.KUploadStates;
+	import com.borhan.upload.events.ActionEvent;
+	import com.borhan.upload.model.KUploadModelLocator;
+	import com.borhan.upload.vo.FileVO;
 	import com.swffocus.SWFFocus;
 	
 	import fl.controls.Button;

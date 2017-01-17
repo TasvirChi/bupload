@@ -1,8 +1,8 @@
-package com.kaltura.upload.commands
+package com.borhan.upload.commands
 {
-	import com.kaltura.upload.events.KUploadErrorEvent;
-	import com.kaltura.upload.events.KUploadEvent;
-	import com.kaltura.upload.vo.FileVO;
+	import com.borhan.upload.events.KUploadErrorEvent;
+	import com.borhan.upload.events.KUploadEvent;
+	import com.borhan.upload.vo.FileVO;
 
 	public class ValidateLimitationsCommand extends BaseUploadCommand
 	{

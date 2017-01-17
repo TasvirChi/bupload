@@ -1,13 +1,13 @@
 <?php
-class KalturaClientBase 
+class BorhanClientBase 
 {
-	const KALTURA_API_VERSION = "3.0";
-	const KALTURA_SERVICE_FORMAT_JSON = 1;
-	const KALTURA_SERVICE_FORMAT_XML  = 2;
-	const KALTURA_SERVICE_FORMAT_PHP  = 3;
+	const BORHAN_API_VERSION = "3.0";
+	const BORHAN_SERVICE_FORMAT_JSON = 1;
+	const BORHAN_SERVICE_FORMAT_XML  = 2;
+	const BORHAN_SERVICE_FORMAT_PHP  = 3;
 
 	/**
-	 * @var KalturaConfiguration
+	 * @var BorhanConfiguration
 	 */
 	private $config;
 	
@@ -32,11 +32,11 @@ class KalturaClientBase
 	private $callsQueue = array();
 	
 	/**
-	 * Kaltura client constructor
+	 * Borhan client constructor
 	 *
-	 * @param KalturaConfiguration $config
+	 * @param BorhanConfiguration $config
 	 */
-	public function __construct(KalturaConfiguration $config)
+	public function __construct(BorhanConfiguration $config)
 	{
 	    $this->config = $config;
 	    
@@ -55,7 +55,7 @@ class KalturaClientBase
 			
 		$this->addParam($params, "ks", $this->ks);
 		
-		$call = new KalturaServiceActionCall($service, $action, $params, $files);
+		$call = new BorhanServiceActionCall($service, $action, $params, $files);
 		$this->callsQueue[] = $call;
 	}
 	
@@ -76,7 +76,7 @@ class KalturaClientBase
 		$this->log("service url: [" . $this->config->serviceUrl . "]");
 		
 		// append the basic params
-		$this->addParam($params, "apiVersion", self::KALTURA_API_VERSION);
+		$this->addParam($params, "apiVersion", self::BORHAN_API_VERSION);
 		$this->addParam($params, "format", $this->config->format);
 		$this->addParam($params, "clientTag", $this->config->clientTag);
 		
@@ -117,7 +117,7 @@ class KalturaClientBase
 		{
 			$this->log("result (serialized): " . $postResult);
 			
-			if ($this->config->format == self::KALTURA_SERVICE_FORMAT_PHP)
+			if ($this->config->format == self::BORHAN_SERVICE_FORMAT_PHP)
 			{
 				$result = @unserialize($postResult);
 
@@ -259,7 +259,7 @@ class KalturaClientBase
 	}
 	
 	/**
-	 * @return KalturaConfiguration
+	 * @return BorhanConfiguration
 	 */
 	public function getConfig()
 	{
@@ -267,14 +267,14 @@ class KalturaClientBase
 	}
 	
 	/**
-	 * @param KalturaConfiguration $config
+	 * @param BorhanConfiguration $config
 	 */
-	public function setConfig(KalturaConfiguration $config)
+	public function setConfig(BorhanConfiguration $config)
 	{
 		$this->config = $config;
 		
 		$logger = $this->config->getLogger();
-		if ($logger instanceof IKalturaLogger)
+		if ($logger instanceof IBorhanLogger)
 		{
 			$this->shouldLog = true;	
 		}
@@ -304,7 +304,7 @@ class KalturaClientBase
 	{
 		if ($this->isError($resultObject))
 		{
-			throw new KalturaException($resultObject["message"], $resultObject["code"]);
+			throw new BorhanException($resultObject["message"], $resultObject["code"]);
 		}
 	}
 	
@@ -362,7 +362,7 @@ class KalturaClientBase
 	}
 }
 
-class KalturaServiceActionCall
+class BorhanServiceActionCall
 {
 	/**
 	 * @var string
@@ -386,7 +386,7 @@ class KalturaServiceActionCall
 	public $files;
 	
 	/**
-	 * Contruct new Kaltura service action call, if params array contain sub arrays (for objects), it will be flattened
+	 * Contruct new Borhan service action call, if params array contain sub arrays (for objects), it will be flattened
 	 *
 	 * @param string $service
 	 * @param string $action
@@ -441,19 +441,19 @@ class KalturaServiceActionCall
  * Abstract base class for all client services 
  *
  */
-abstract class KalturaServiceBase
+abstract class BorhanServiceBase
 {
 	/**
-	 * @var KalturaClient
+	 * @var BorhanClient
 	 */
 	protected $client;
 	
 	/**
-	 * Initialize the service keeping reference to the KalturaClient
+	 * Initialize the service keeping reference to the BorhanClient
 	 *
-	 * @param KalturaClient $client
+	 * @param BorhanClient $client
 	 */
-	public function __construct(KalturaClient $client)
+	public function __construct(BorhanClient $client)
 	{
 		$this->client = $client;
 	}
@@ -463,7 +463,7 @@ abstract class KalturaServiceBase
  * Abstract base class for all client objects 
  *
  */
-abstract class KalturaObjectBase
+abstract class BorhanObjectBase
 {
 	protected function addIfNotNull(&$params, $paramName, $paramValue)
 	{
@@ -485,7 +485,7 @@ abstract class KalturaObjectBase
 	}
 }
 
-class KalturaException extends Exception 
+class BorhanException extends Exception 
 {
 	protected $code;
 	
@@ -496,17 +496,17 @@ class KalturaException extends Exception
     }
 }
 
-class KalturaConfiguration
+class BorhanConfiguration
 {
 	private $logger;
 
-	public $serviceUrl    = "http://www.kaltura.com/";
+	public $serviceUrl    = "http://www.borhan.com/";
 	public $partnerId     = null;
 	public $format        = 3;
 	public $clientTag 	  = "php5";
 	
 	/**
-	 * Constructs new Kaltura configuration object
+	 * Constructs new Borhan configuration object
 	 *
 	 */
 	public function __construct($partnerId = -1)
@@ -518,11 +518,11 @@ class KalturaConfiguration
 	}
 	
 	/**
-	 * Set logger to get kaltura client debug logs
+	 * Set logger to get borhan client debug logs
 	 *
-	 * @param IKalturaLogger $log
+	 * @param IBorhanLogger $log
 	 */
-	public function setLogger(IKalturaLogger $log)
+	public function setLogger(IBorhanLogger $log)
 	{
 		$this->logger = $log;
 	}
@@ -530,7 +530,7 @@ class KalturaConfiguration
 	/**
 	 * Gets the logger (Internal client use)
 	 *
-	 * @return IKalturaLogger
+	 * @return IBorhanLogger
 	 */
 	public function getLogger()
 	{
@@ -539,10 +539,10 @@ class KalturaConfiguration
 }
 
 /**
- * Implement to get Kaltura Client logs
+ * Implement to get Borhan Client logs
  *
  */
-interface IKalturaLogger 
+interface IBorhanLogger 
 {
 	function log($msg); 
 }

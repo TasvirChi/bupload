@@ -1,7 +1,7 @@
-package com.kaltura.upload.commands
+package com.borhan.upload.commands
 {
-	import com.kaltura.upload.errors.KsuError;
-	import com.kaltura.upload.vo.FileVO;
+	import com.borhan.upload.errors.KsuError;
+	import com.borhan.upload.vo.FileVO;
 	
 	import flash.errors.IOError;
 

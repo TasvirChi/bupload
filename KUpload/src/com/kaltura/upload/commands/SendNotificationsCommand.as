@@ -1,7 +1,7 @@
-package com.kaltura.upload.commands
+package com.borhan.upload.commands
 {
-	import com.kaltura.upload.business.PartnerNotificationVO;
-	import com.kaltura.upload.events.KUploadEvent;
+	import com.borhan.upload.business.PartnerNotificationVO;
+	import com.borhan.upload.events.KUploadEvent;
 
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;

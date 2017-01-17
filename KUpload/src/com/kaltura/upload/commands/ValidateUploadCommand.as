@@ -1,8 +1,8 @@
-package com.kaltura.upload.commands
+package com.borhan.upload.commands
 {
-	import com.kaltura.upload.events.KUploadErrorEvent;
-	import com.kaltura.upload.vo.FileVO;
-	import com.kaltura.vo.importees.UploadStatusTypes;
+	import com.borhan.upload.events.KUploadErrorEvent;
+	import com.borhan.upload.vo.FileVO;
+	import com.borhan.vo.importees.UploadStatusTypes;
 
 	public class ValidateUploadCommand extends BaseUploadCommand
 	{

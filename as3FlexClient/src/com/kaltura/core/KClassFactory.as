@@ -1,6 +1,6 @@
-package com.kaltura.core
+package com.borhan.core
 {
-	import com.kaltura.utils.ObjectUtil;
+	import com.borhan.utils.ObjectUtil;
 	
 	import flash.utils.describeType;
 	import flash.utils.getDefinitionByName;
@@ -161,7 +161,7 @@ package com.kaltura.core
 		{
 			var cls : Class;
 			try {
-				cls = getDefinitionByName('com.kaltura.vo.'+ objectType) as Class;
+				cls = getDefinitionByName('com.borhan.vo.'+ objectType) as Class;
 			}
 			catch( e : Error ){
 				cls = Object;

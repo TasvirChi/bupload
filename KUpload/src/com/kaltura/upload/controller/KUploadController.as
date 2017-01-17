@@ -1,4 +1,4 @@
-package com.kaltura.upload.controller
+package com.borhan.upload.controller
 {
 	public class KUploadController
 	{

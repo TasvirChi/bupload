@@ -1,16 +1,16 @@
-package com.kaltura.upload.commands
+package com.borhan.upload.commands
 {
-	import com.kaltura.commands.uploadToken.UploadTokenAdd;
-	import com.kaltura.commands.uploadToken.UploadTokenUpload;
-	import com.kaltura.events.KalturaEvent;
-	import com.kaltura.net.PolledFileReference;
-	import com.kaltura.net.TemplateURLVariables;
-	import com.kaltura.upload.errors.KsuError;
-	import com.kaltura.upload.events.KUploadErrorEvent;
-	import com.kaltura.upload.events.KUploadEvent;
-	import com.kaltura.upload.vo.FileVO;
-	import com.kaltura.vo.KalturaUploadToken;
-	import com.kaltura.vo.importees.UploadStatusTypes;
+	import com.borhan.commands.uploadToken.UploadTokenAdd;
+	import com.borhan.commands.uploadToken.UploadTokenUpload;
+	import com.borhan.events.BorhanEvent;
+	import com.borhan.net.PolledFileReference;
+	import com.borhan.net.TemplateURLVariables;
+	import com.borhan.upload.errors.KsuError;
+	import com.borhan.upload.events.KUploadErrorEvent;
+	import com.borhan.upload.events.KUploadEvent;
+	import com.borhan.upload.vo.FileVO;
+	import com.borhan.vo.BorhanUploadToken;
+	import com.borhan.vo.importees.UploadStatusTypes;
 	
 	import flash.events.Event;
 	import flash.events.HTTPStatusEvent;
@@ -59,12 +59,12 @@ package com.kaltura.upload.commands
 					_activeFile.file.fileReference.upload(uploadRequest);
 				}
 				else {
-					var fileToken:KalturaUploadToken = new KalturaUploadToken();
+					var fileToken:BorhanUploadToken = new BorhanUploadToken();
 					fileToken.fileName = _activeFile.file.fileReference.name;
 					fileToken.fileSize = _activeFile.file.bytesTotal;
 					var uploadToken:UploadTokenAdd = new UploadTokenAdd(fileToken);
-					uploadToken.addEventListener(KalturaEvent.COMPLETE, uploadTokenAddHandler);
-					uploadToken.addEventListener(KalturaEvent.FAILED, onUploadTokenFailed);
+					uploadToken.addEventListener(BorhanEvent.COMPLETE, uploadTokenAddHandler);
+					uploadToken.addEventListener(BorhanEvent.FAILED, onUploadTokenFailed);
 					
 					model.context.kc.post(uploadToken);
 				}
@@ -79,8 +79,8 @@ package com.kaltura.upload.commands
 		/**
 		 * file token was added, now upload the file
 		 * */
-		private function uploadTokenAddHandler(event:KalturaEvent):void {
-			var tokenId:String = (event.data as KalturaUploadToken).id;
+		private function uploadTokenAddHandler(event:BorhanEvent):void {
+			var tokenId:String = (event.data as BorhanUploadToken).id;
 			_activeFile.token = tokenId;
 			_call = new UploadTokenUpload(tokenId, _activeFile.file.fileReference);
 			_call.useTimeout = false;
@@ -95,8 +95,8 @@ package com.kaltura.upload.commands
 				_activeFile.file.fileReference.addEventListener(Event.COMPLETE, 					fileCompleteHandler);
 			}
 			else {
-				_call.addEventListener(KalturaEvent.COMPLETE, 										fileCompleteHandler);
-				_call.addEventListener(KalturaEvent.FAILED, 										onFileFailed);
+				_call.addEventListener(BorhanEvent.COMPLETE, 										fileCompleteHandler);
+				_call.addEventListener(BorhanEvent.FAILED, 										onFileFailed);
 			}
 			_activeFile.file.fileReference.addEventListener(IOErrorEvent.IO_ERROR, 					onFileFailed );
 			_activeFile.file.fileReference.addEventListener(SecurityErrorEvent.SECURITY_ERROR, 		onFileFailed);
@@ -117,8 +117,8 @@ package com.kaltura.upload.commands
 				_activeFile.file.fileReference.removeEventListener(Event.COMPLETE, 					fileCompleteHandler);
 			}
 			else {
-				_call.removeEventListener(KalturaEvent.COMPLETE, 									fileCompleteHandler);
-				_call.removeEventListener(KalturaEvent.FAILED, 										onFileFailed);
+				_call.removeEventListener(BorhanEvent.COMPLETE, 									fileCompleteHandler);
+				_call.removeEventListener(BorhanEvent.FAILED, 										onFileFailed);
 			}
 			_activeFile.file.fileReference.removeEventListener(IOErrorEvent.IO_ERROR, 				onFileFailed );
 			_activeFile.file.fileReference.removeEventListener(SecurityErrorEvent.SECURITY_ERROR,	onFileFailed);
@@ -149,8 +149,8 @@ package com.kaltura.upload.commands
 			var rfileName:String = 'unknownFileName';
 			var fileName:String = _activeFile.file.fileReference.name;
 			switch (event.type) {
-				case KalturaEvent.FAILED:
-					str = 'KalturaEvent.FAILED, ' + (event as KalturaEvent).error.errorMsg;
+				case BorhanEvent.FAILED:
+					str = 'BorhanEvent.FAILED, ' + (event as BorhanEvent).error.errorMsg;
 					rfileName = (event.target.fileData as FileReference).name;
 					break;
 				case IOErrorEvent.IO_ERROR:

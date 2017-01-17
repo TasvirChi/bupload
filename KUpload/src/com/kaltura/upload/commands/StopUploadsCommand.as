@@ -1,6 +1,6 @@
-package com.kaltura.upload.commands
+package com.borhan.upload.commands
 {
-	import com.kaltura.upload.vo.FileVO;
+	import com.borhan.upload.vo.FileVO;
 
 	public class StopUploadsCommand extends BaseUploadCommand
 	{

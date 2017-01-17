@@ -1,4 +1,4 @@
-package com.kaltura.upload.enums
+package com.borhan.upload.enums
 {
 	public class KUploadStates
 	{

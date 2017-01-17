@@ -1,7 +1,7 @@
-package com.kaltura.upload.commands
+package com.borhan.upload.commands
 {
-	import com.kaltura.upload.controller.KUploadController;
-	import com.kaltura.upload.vo.FileVO;
+	import com.borhan.upload.controller.KUploadController;
+	import com.borhan.upload.vo.FileVO;
 	
 	import flash.external.ExternalInterface;
 	import flash.net.FileReference;

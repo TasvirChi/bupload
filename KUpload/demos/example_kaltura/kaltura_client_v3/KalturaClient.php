@@ -1,7 +1,7 @@
 <?php
-require_once("KalturaClientBase.php");
+require_once("BorhanClientBase.php");
 
-class KalturaAspectRatioType
+class BorhanAspectRatioType
 {
 	const KEEP_ORIG_RATIO = 1;
 	const KEEP_ORIG_DIMENSIONS = 2;
@@ -10,7 +10,7 @@ class KalturaAspectRatioType
 	const KEEP_HEIGHT = 5;
 }
 
-class KalturaBatchJobStatus
+class BorhanBatchJobStatus
 {
 	const PENDING = 0;
 	const QUEUED = 1;
@@ -22,7 +22,7 @@ class KalturaBatchJobStatus
 	const ABORTED = 7;
 }
 
-class KalturaBatchJobType
+class BorhanBatchJobType
 {
 	const CONVERT = 0;
 	const IMPORT = 1;
@@ -37,13 +37,13 @@ class KalturaBatchJobType
 	const PROJECT = 1000;
 }
 
-class KalturaEditorType
+class BorhanEditorType
 {
 	const SIMPLE = 1;
 	const ADVANCED = 2;
 }
 
-class KalturaEntryStatus
+class BorhanEntryStatus
 {
 	const ERROR_CONVERTING = -1;
 	const IMPORT = 0;
@@ -55,7 +55,7 @@ class KalturaEntryStatus
 	const BLOCKED = 6;
 }
 
-class KalturaEntryType
+class BorhanEntryType
 {
 	const AUTOMATIC = -1;
 	const MEDIA_CLIP = 1;
@@ -65,14 +65,14 @@ class KalturaEntryType
 	const DOCUMENT = 10;
 }
 
-class KalturaGender
+class BorhanGender
 {
 	const UNKNOWN = 0;
 	const MALE = 1;
 	const FEMALE = 2;
 }
 
-class KalturaLicenseType
+class BorhanLicenseType
 {
 	const UNKNOWN = -1;
 	const NONE = 0;
@@ -93,7 +93,7 @@ class KalturaLicenseType
 	const MOZILLA = 15;
 }
 
-class KalturaMailJobStatus
+class BorhanMailJobStatus
 {
 	const PENDING = 1;
 	const SENT = 2;
@@ -101,20 +101,20 @@ class KalturaMailJobStatus
 	const QUEUED = 4;
 }
 
-class KalturaMediaType
+class BorhanMediaType
 {
 	const VIDEO = 1;
 	const IMAGE = 2;
 	const AUDIO = 5;
 }
 
-class KalturaModerationFlagStatus
+class BorhanModerationFlagStatus
 {
 	const PENDING = 1;
 	const MODERATED = 2;
 }
 
-class KalturaModerationFlagType
+class BorhanModerationFlagType
 {
 	const SEXUAL_CONTENT = 1;
 	const VIOLENT_REPULSIVE = 2;
@@ -122,13 +122,13 @@ class KalturaModerationFlagType
 	const SPAM_COMMERCIALS = 4;
 }
 
-class KalturaModerationObjectType
+class BorhanModerationObjectType
 {
 	const ENTRY = 2;
 	const USER = 3;
 }
 
-class KalturaNotificationObjectType
+class BorhanNotificationObjectType
 {
 	const ENTRY = 1;
 	const KSHOW = 2;
@@ -136,7 +136,7 @@ class KalturaNotificationObjectType
 	const BATCH_JOB = 4;
 }
 
-class KalturaNotificationStatus
+class BorhanNotificationStatus
 {
 	const PENDING = 1;
 	const SENT = 2;
@@ -147,7 +147,7 @@ class KalturaNotificationStatus
 	const QUEUED = 7;
 }
 
-class KalturaNotificationType
+class BorhanNotificationType
 {
 	const ENTRY_ADD = 1;
 	const ENTR_UPDATE_PERMISSIONS = 2;
@@ -160,7 +160,7 @@ class KalturaNotificationType
 	const USER_BANNED = 26;
 }
 
-class KalturaPartnerType
+class BorhanPartnerType
 {
 	const WIKI = 100;
 	const WORDPRESS = 101;
@@ -169,14 +169,14 @@ class KalturaPartnerType
 	const COMMUNITY_EDITION = 105;
 }
 
-class KalturaPlaylistType
+class BorhanPlaylistType
 {
 	const DYNAMIC = 10;
 	const STATIC_LIST = 3;
 	const EXTERNAL = 101;
 }
 
-class KalturaReportType
+class BorhanReportType
 {
 	const TOP_CONTENT = 1;
 	const CONTENT_DROPOFF = 2;
@@ -187,7 +187,7 @@ class KalturaReportType
 	const CONTENT_CONTRIBUTIONS = 7;
 }
 
-class KalturaSearchProviderType
+class BorhanSearchProviderType
 {
 	const FLICKR = 3;
 	const YOUTUBE = 4;
@@ -198,21 +198,21 @@ class KalturaSearchProviderType
 	const NYPL = 11;
 	const CURRENT = 12;
 	const MEDIA_COMMONS = 13;
-	const KALTURA = 20;
-	const KALTURA_USER_CLIPS = 21;
+	const BORHAN = 20;
+	const BORHAN_USER_CLIPS = 21;
 	const ARCHIVE_ORG = 22;
-	const KALTURA_PARTNER = 23;
+	const BORHAN_PARTNER = 23;
 	const METACAFE = 24;
 	const SEARCH_PROXY = 28;
 }
 
-class KalturaSessionType
+class BorhanSessionType
 {
 	const USER = 0;
 	const ADMIN = 2;
 }
 
-class KalturaSourceType
+class BorhanSourceType
 {
 	const FILE = 1;
 	const WEBCAM = 2;
@@ -220,7 +220,7 @@ class KalturaSourceType
 	const SEARCH_PROVIDER = 6;
 }
 
-class KalturaStatsEventType
+class BorhanStatsEventType
 {
 	const WIDGET_LOADED = 1;
 	const MEDIA_LOADED = 2;
@@ -250,13 +250,13 @@ class KalturaStatsEventType
 	const FUTURE_USE_3 = 26;
 }
 
-class KalturaUiConfCreationMode
+class BorhanUiConfCreationMode
 {
 	const WIZARD = 2;
 	const ADVANCED = 3;
 }
 
-class KalturaUiConfObjType
+class BorhanUiConfObjType
 {
 	const PLAYER = 1;
 	const CONTRIBUTION_WIZARD = 2;
@@ -266,20 +266,20 @@ class KalturaUiConfObjType
 	const APP_STUDIO = 6;
 }
 
-class KalturaUserStatus
+class BorhanUserStatus
 {
 	const BLOCKED = 0;
 	const ACTIVE = 1;
 	const DELETED = 2;
 }
 
-class KalturaWidgetSecurityType
+class BorhanWidgetSecurityType
 {
 	const NONE = 1;
 	const TIMEHASH = 2;
 }
 
-class KalturaAdminUser extends KalturaObjectBase
+class BorhanAdminUser extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -307,7 +307,7 @@ class KalturaAdminUser extends KalturaObjectBase
 
 }
 
-class KalturaBaseEntry extends KalturaObjectBase
+class BorhanBaseEntry extends BorhanObjectBase
 {
 	/**
 	 * Auto generated 10 characters alphanumeric string
@@ -363,7 +363,7 @@ class KalturaBaseEntry extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaEntryStatus
+	 * @var BorhanEntryStatus
 	 * @readonly
 	 */
 	public $status = null;
@@ -371,7 +371,7 @@ class KalturaBaseEntry extends KalturaObjectBase
 	/**
 	 * The type of the entry, this is auto filled by the derived entry object
 	 *
-	 * @var KalturaEntryType
+	 * @var BorhanEntryType
 	 * @readonly
 	 */
 	public $type = null;
@@ -441,7 +441,7 @@ class KalturaBaseEntry extends KalturaObjectBase
 	/**
 	 * License type used for this entry
 	 *
-	 * @var KalturaLicenseType
+	 * @var BorhanLicenseType
 	 */
 	public $licenseType = null;
 
@@ -456,7 +456,7 @@ class KalturaBaseEntry extends KalturaObjectBase
 
 }
 
-class KalturaFilter extends KalturaObjectBase
+class BorhanFilter extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -468,7 +468,7 @@ class KalturaFilter extends KalturaObjectBase
 
 }
 
-class KalturaBaseEntryFilter extends KalturaFilter
+class BorhanBaseEntryFilter extends BorhanFilter
 {
 	/**
 	 * This filter should be in use for retrieving only a specific entry (identified by its entryId).
@@ -513,14 +513,14 @@ class KalturaBaseEntryFilter extends KalturaFilter
 	public $nameEqual = null;
 
 	/**
-	 * This filter should be in use for retrieving only media entries which were uploaded by/assigned to users of a specific Kaltura Partner (identified by Partner ID).
+	 * This filter should be in use for retrieving only media entries which were uploaded by/assigned to users of a specific Borhan Partner (identified by Partner ID).
 	 *
 	 * @var int
 	 */
 	public $partnerIdEqual = null;
 
 	/**
-	 * This filter should be in use for retrieving only media entries within Kaltura network which were uploaded by/assigned to users of few Kaltura Partners  (string should include comma separated list of PartnerIDs)
+	 * This filter should be in use for retrieving only media entries within Borhan network which were uploaded by/assigned to users of few Borhan Partners  (string should include comma separated list of PartnerIDs)
 	 *
 	 * @var string
 	 */
@@ -576,14 +576,14 @@ class KalturaBaseEntryFilter extends KalturaFilter
 	public $adminTagsMultiLikeAnd = null;
 
 	/**
-	 * This filter should be in use for retrieving only entries, at a specific {@link ?object=KalturaEntryStatus KalturaEntryStatus}.
+	 * This filter should be in use for retrieving only entries, at a specific {@link ?object=BorhanEntryStatus BorhanEntryStatus}.
 	 *
-	 * @var KalturaEntryStatus
+	 * @var BorhanEntryStatus
 	 */
 	public $statusEqual = null;
 
 	/**
-	 * This filter should be in use for retrieving only entries, at few specific {@link ?object=KalturaEntryStatus KalturaEntryStatus}.
+	 * This filter should be in use for retrieving only entries, at few specific {@link ?object=BorhanEntryStatus BorhanEntryStatus}.
 	 *
 	 * @var string
 	 */
@@ -592,26 +592,26 @@ class KalturaBaseEntryFilter extends KalturaFilter
 	/**
 	 * 
 	 *
-	 * @var KalturaEntryType
+	 * @var BorhanEntryType
 	 */
 	public $typeEqual = null;
 
 	/**
-	 * This filter should be in use for retrieving entries of few {@link ?object=KalturaEntryType KalturaEntryType} (string should include a comma separated list of {@link ?object=KalturaEntryType KalturaEntryType} enumerated parameters).
+	 * This filter should be in use for retrieving entries of few {@link ?object=BorhanEntryType BorhanEntryType} (string should include a comma separated list of {@link ?object=BorhanEntryType BorhanEntryType} enumerated parameters).
 	 *
 	 * @var string
 	 */
 	public $typeIn = null;
 
 	/**
-	 * This filter parameter should be in use for retrieving only media entries which were created at Kaltura system after a specific time/date (standard timestamp format).
+	 * This filter parameter should be in use for retrieving only media entries which were created at Borhan system after a specific time/date (standard timestamp format).
 	 *
 	 * @var int
 	 */
 	public $createdAtGreaterThanOrEqual = null;
 
 	/**
-	 * This filter parameter should be in use for retrieving only media entries which were created at Kaltura system before a specific time/date (standard timestamp format).
+	 * This filter parameter should be in use for retrieving only media entries which were created at Borhan system before a specific time/date (standard timestamp format).
 	 *
 	 * @var int
 	 */
@@ -683,12 +683,12 @@ class KalturaBaseEntryFilter extends KalturaFilter
 
 }
 
-class KalturaBaseEntryListResponse extends KalturaObjectBase
+class BorhanBaseEntryListResponse extends BorhanObjectBase
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaBaseEntryArray
+	 * @var BorhanBaseEntryArray
 	 * @readonly
 	 */
 	public $objects;
@@ -704,7 +704,7 @@ class KalturaBaseEntryListResponse extends KalturaObjectBase
 
 }
 
-class KalturaBaseEntryOrderBy
+class BorhanBaseEntryOrderBy
 {
 	const NAME_ASC = "+name";
 	const NAME_DESC = "-name";
@@ -714,7 +714,7 @@ class KalturaBaseEntryOrderBy
 	const RANK_DESC = "-rank";
 }
 
-class KalturaBaseJob extends KalturaObjectBase
+class BorhanBaseJob extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -775,12 +775,12 @@ class KalturaBaseJob extends KalturaObjectBase
 
 }
 
-class KalturaBatchGetExclusiveNotificationJobsResponse extends KalturaObjectBase
+class BorhanBatchGetExclusiveNotificationJobsResponse extends BorhanObjectBase
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaNotificationArray
+	 * @var BorhanNotificationArray
 	 * @readonly
 	 */
 	public $notifications;
@@ -788,7 +788,7 @@ class KalturaBatchGetExclusiveNotificationJobsResponse extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaPartnerArray
+	 * @var BorhanPartnerArray
 	 * @readonly
 	 */
 	public $partners;
@@ -796,7 +796,7 @@ class KalturaBatchGetExclusiveNotificationJobsResponse extends KalturaObjectBase
 
 }
 
-class KalturaBatchJob extends KalturaBaseJob
+class BorhanBatchJob extends BorhanBaseJob
 {
 	/**
 	 * 
@@ -808,7 +808,7 @@ class KalturaBatchJob extends KalturaBaseJob
 	/**
 	 * 
 	 *
-	 * @var KalturaBatchJobType
+	 * @var BorhanBatchJobType
 	 * @readonly
 	 */
 	public $jobType = null;
@@ -823,7 +823,7 @@ class KalturaBatchJob extends KalturaBaseJob
 	/**
 	 * 
 	 *
-	 * @var KalturaBatchJobStatus
+	 * @var BorhanBatchJobStatus
 	 */
 	public $status = null;
 
@@ -879,7 +879,7 @@ class KalturaBatchJob extends KalturaBaseJob
 
 }
 
-class KalturaBulkUpload extends KalturaObjectBase
+class BorhanBulkUpload extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -912,7 +912,7 @@ class KalturaBulkUpload extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaBatchJobStatus
+	 * @var BorhanBatchJobStatus
 	 */
 	public $status = null;
 
@@ -933,12 +933,12 @@ class KalturaBulkUpload extends KalturaObjectBase
 
 }
 
-class KalturaBulkUploadListResponse extends KalturaObjectBase
+class BorhanBulkUploadListResponse extends BorhanObjectBase
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaBulkUploads
+	 * @var BorhanBulkUploads
 	 * @readonly
 	 */
 	public $objects;
@@ -954,7 +954,7 @@ class KalturaBulkUploadListResponse extends KalturaObjectBase
 
 }
 
-class KalturaCEError extends KalturaObjectBase
+class BorhanCEError extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -1030,7 +1030,7 @@ class KalturaCEError extends KalturaObjectBase
 
 }
 
-class KalturaClientNotification extends KalturaObjectBase
+class BorhanClientNotification extends BorhanObjectBase
 {
 	/**
 	 * The URL where the notification should be sent to 
@@ -1049,13 +1049,13 @@ class KalturaClientNotification extends KalturaObjectBase
 
 }
 
-class KalturaCommercialUseType
+class BorhanCommercialUseType
 {
 	const COMMERCIAL_USE = "commercial_use";
 	const NON_COMMERCIAL_USE = "non-commercial_use";
 }
 
-class KalturaConversionProfile extends KalturaObjectBase
+class BorhanConversionProfile extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -1111,7 +1111,7 @@ class KalturaConversionProfile extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaAspectRatioType
+	 * @var BorhanAspectRatioType
 	 */
 	public $aspectRatioType = null;
 
@@ -1148,7 +1148,7 @@ class KalturaConversionProfile extends KalturaObjectBase
 
 }
 
-class KalturaFilterPager extends KalturaObjectBase
+class BorhanFilterPager extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -1167,7 +1167,7 @@ class KalturaFilterPager extends KalturaObjectBase
 
 }
 
-class KalturaMailJob extends KalturaBaseJob
+class BorhanMailJob extends BorhanBaseJob
 {
 	/**
 	 * 
@@ -1186,7 +1186,7 @@ class KalturaMailJob extends KalturaBaseJob
 	/**
 	 * 
 	 *
-	 * @var KalturaMailJobStatus
+	 * @var BorhanMailJobStatus
 	 */
 	public $status = null;
 
@@ -1270,7 +1270,7 @@ class KalturaMailJob extends KalturaBaseJob
 
 }
 
-class KalturaPlayableEntry extends KalturaBaseEntry
+class BorhanPlayableEntry extends BorhanBaseEntry
 {
 	/**
 	 * Number of plays
@@ -1323,12 +1323,12 @@ class KalturaPlayableEntry extends KalturaBaseEntry
 
 }
 
-class KalturaMediaEntry extends KalturaPlayableEntry
+class BorhanMediaEntry extends BorhanPlayableEntry
 {
 	/**
 	 * The media type of the entry
 	 *
-	 * @var KalturaMediaType
+	 * @var BorhanMediaType
 	 * @insertonly
 	 */
 	public $mediaType = null;
@@ -1344,7 +1344,7 @@ class KalturaMediaEntry extends KalturaPlayableEntry
 	/**
 	 * The source type of the entry 
 	 *
-	 * @var KalturaSourceType
+	 * @var BorhanSourceType
 	 * @readonly
 	 */
 	public $sourceType = null;
@@ -1352,7 +1352,7 @@ class KalturaMediaEntry extends KalturaPlayableEntry
 	/**
 	 * The search provider type used to import this entry
 	 *
-	 * @var KalturaSearchProviderType
+	 * @var BorhanSearchProviderType
 	 * @readonly
 	 */
 	public $searchProviderType = null;
@@ -1398,17 +1398,17 @@ class KalturaMediaEntry extends KalturaPlayableEntry
 
 }
 
-class KalturaPlayableEntryFilter extends KalturaBaseEntryFilter
+class BorhanPlayableEntryFilter extends BorhanBaseEntryFilter
 {
 
 }
 
-class KalturaMediaEntryFilter extends KalturaPlayableEntryFilter
+class BorhanMediaEntryFilter extends BorhanPlayableEntryFilter
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaMediaType
+	 * @var BorhanMediaType
 	 */
 	public $mediaTypeEqual = null;
 
@@ -1436,7 +1436,7 @@ class KalturaMediaEntryFilter extends KalturaPlayableEntryFilter
 
 }
 
-class KalturaPlayableEntryOrderBy
+class BorhanPlayableEntryOrderBy
 {
 	const PLAYS_ASC = "+plays";
 	const PLAYS_DESC = "-plays";
@@ -1450,7 +1450,7 @@ class KalturaPlayableEntryOrderBy
 	const RANK_DESC = "-rank";
 }
 
-class KalturaMediaEntryOrderBy
+class BorhanMediaEntryOrderBy
 {
 	const PLAYS_ASC = "+plays";
 	const PLAYS_DESC = "-plays";
@@ -1464,12 +1464,12 @@ class KalturaMediaEntryOrderBy
 	const RANK_DESC = "-rank";
 }
 
-class KalturaMediaListResponse extends KalturaObjectBase
+class BorhanMediaListResponse extends BorhanObjectBase
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaMediaEntryArray
+	 * @var BorhanMediaEntryArray
 	 * @readonly
 	 */
 	public $objects;
@@ -1485,7 +1485,7 @@ class KalturaMediaListResponse extends KalturaObjectBase
 
 }
 
-class KalturaMixEntry extends KalturaPlayableEntry
+class BorhanMixEntry extends BorhanPlayableEntry
 {
 	/**
 	 * Indicates whether the user has submited a real thumbnail to the mix (Not the one that was generated automaticaly)
@@ -1498,7 +1498,7 @@ class KalturaMixEntry extends KalturaPlayableEntry
 	/**
 	 * The editor type used to edit the metadata
 	 *
-	 * @var KalturaEditorType
+	 * @var BorhanEditorType
 	 */
 	public $editorType = null;
 
@@ -1512,12 +1512,12 @@ class KalturaMixEntry extends KalturaPlayableEntry
 
 }
 
-class KalturaMixEntryFilter extends KalturaPlayableEntryFilter
+class BorhanMixEntryFilter extends BorhanPlayableEntryFilter
 {
 
 }
 
-class KalturaMixEntryOrderBy
+class BorhanMixEntryOrderBy
 {
 	const PLAYS_ASC = "+plays";
 	const PLAYS_DESC = "-plays";
@@ -1531,12 +1531,12 @@ class KalturaMixEntryOrderBy
 	const RANK_DESC = "-rank";
 }
 
-class KalturaMixListResponse extends KalturaObjectBase
+class BorhanMixListResponse extends BorhanObjectBase
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaMixEntryArray
+	 * @var BorhanMixEntryArray
 	 * @readonly
 	 */
 	public $objects;
@@ -1552,7 +1552,7 @@ class KalturaMixListResponse extends KalturaObjectBase
 
 }
 
-class KalturaModerationFlag extends KalturaObjectBase
+class BorhanModerationFlag extends BorhanObjectBase
 {
 	/**
 	 * Moderation flag id
@@ -1581,7 +1581,7 @@ class KalturaModerationFlag extends KalturaObjectBase
 	/**
 	 * The type of the moderation flag (entry or user)
 	 *
-	 * @var KalturaModerationObjectType
+	 * @var BorhanModerationObjectType
 	 * @readonly
 	 */
 	public $objectType = null;
@@ -1603,7 +1603,7 @@ class KalturaModerationFlag extends KalturaObjectBase
 	/**
 	 * The moderation flag status
 	 *
-	 * @var KalturaModerationFlagStatus
+	 * @var BorhanModerationFlagStatus
 	 * @readonly
 	 */
 	public $status = null;
@@ -1618,7 +1618,7 @@ class KalturaModerationFlag extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaModerationFlagType
+	 * @var BorhanModerationFlagType
 	 */
 	public $flagType = null;
 
@@ -1641,12 +1641,12 @@ class KalturaModerationFlag extends KalturaObjectBase
 
 }
 
-class KalturaModerationFlagListResponse extends KalturaObjectBase
+class BorhanModerationFlagListResponse extends BorhanObjectBase
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaModerationFlagArray
+	 * @var BorhanModerationFlagArray
 	 * @readonly
 	 */
 	public $objects;
@@ -1662,7 +1662,7 @@ class KalturaModerationFlagListResponse extends KalturaObjectBase
 
 }
 
-class KalturaNotification extends KalturaBaseJob
+class BorhanNotification extends BorhanBaseJob
 {
 	/**
 	 * 
@@ -1674,7 +1674,7 @@ class KalturaNotification extends KalturaBaseJob
 	/**
 	 * 
 	 *
-	 * @var KalturaNotificationType
+	 * @var BorhanNotificationType
 	 */
 	public $type = null;
 
@@ -1688,7 +1688,7 @@ class KalturaNotification extends KalturaBaseJob
 	/**
 	 * 
 	 *
-	 * @var KalturaNotificationStatus
+	 * @var BorhanNotificationStatus
 	 */
 	public $status = null;
 
@@ -1716,14 +1716,14 @@ class KalturaNotification extends KalturaBaseJob
 	/**
 	 * 
 	 *
-	 * @var KalturaNotificationObjectType
+	 * @var BorhanNotificationObjectType
 	 */
 	public $objectType = null;
 
 
 }
 
-class KalturaPartner extends KalturaObjectBase
+class BorhanPartner extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -1793,7 +1793,7 @@ class KalturaPartner extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaCommercialUseType
+	 * @var BorhanCommercialUseType
 	 */
 	public $commercialUse = null;
 
@@ -1821,7 +1821,7 @@ class KalturaPartner extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaPartnerType
+	 * @var BorhanPartnerType
 	 */
 	public $type = null;
 
@@ -1928,7 +1928,7 @@ class KalturaPartner extends KalturaObjectBase
 
 }
 
-class KalturaPartnerUsage extends KalturaObjectBase
+class BorhanPartnerUsage extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -1981,7 +1981,7 @@ class KalturaPartnerUsage extends KalturaObjectBase
 
 }
 
-class KalturaPlaylist extends KalturaBaseEntry
+class BorhanPlaylist extends BorhanBaseEntry
 {
 	/**
 	 * Content of the playlist - 
@@ -1996,7 +1996,7 @@ class KalturaPlaylist extends KalturaBaseEntry
 	/**
 	 * Type of playlist  
 	 *
-	 * @var KalturaPlaylistType
+	 * @var BorhanPlaylistType
 	 */
 	public $playlistType = null;
 
@@ -2027,17 +2027,17 @@ class KalturaPlaylist extends KalturaBaseEntry
 
 }
 
-class KalturaPlaylistFilter extends KalturaBaseEntryFilter
+class BorhanPlaylistFilter extends BorhanBaseEntryFilter
 {
 
 }
 
-class KalturaPlaylistListResponse extends KalturaObjectBase
+class BorhanPlaylistListResponse extends BorhanObjectBase
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaPlaylistArray
+	 * @var BorhanPlaylistArray
 	 * @readonly
 	 */
 	public $objects;
@@ -2053,7 +2053,7 @@ class KalturaPlaylistListResponse extends KalturaObjectBase
 
 }
 
-class KalturaPlaylistOrderBy
+class BorhanPlaylistOrderBy
 {
 	const NAME_ASC = "+name";
 	const NAME_DESC = "-name";
@@ -2063,7 +2063,7 @@ class KalturaPlaylistOrderBy
 	const RANK_DESC = "-rank";
 }
 
-class KalturaReportGraph extends KalturaObjectBase
+class BorhanReportGraph extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -2082,7 +2082,7 @@ class KalturaReportGraph extends KalturaObjectBase
 
 }
 
-class KalturaReportInputFilter extends KalturaObjectBase
+class BorhanReportInputFilter extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -2122,7 +2122,7 @@ class KalturaReportInputFilter extends KalturaObjectBase
 
 }
 
-class KalturaReportTable extends KalturaObjectBase
+class BorhanReportTable extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -2151,7 +2151,7 @@ class KalturaReportTable extends KalturaObjectBase
 
 }
 
-class KalturaReportTotal extends KalturaObjectBase
+class BorhanReportTotal extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -2170,7 +2170,7 @@ class KalturaReportTotal extends KalturaObjectBase
 
 }
 
-class KalturaSearch extends KalturaObjectBase
+class BorhanSearch extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -2182,14 +2182,14 @@ class KalturaSearch extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaSearchProviderType
+	 * @var BorhanSearchProviderType
 	 */
 	public $searchSource = null;
 
 	/**
 	 * 
 	 *
-	 * @var KalturaMediaType
+	 * @var BorhanMediaType
 	 */
 	public $mediaType = null;
 
@@ -2205,7 +2205,7 @@ class KalturaSearch extends KalturaObjectBase
 
 }
 
-class KalturaSearchResult extends KalturaSearch
+class BorhanSearchResult extends BorhanSearch
 {
 	/**
 	 * 
@@ -2266,7 +2266,7 @@ class KalturaSearchResult extends KalturaSearch
 	/**
 	 * 
 	 *
-	 * @var KalturaLicenseType
+	 * @var BorhanLicenseType
 	 */
 	public $licenseType = null;
 
@@ -2280,12 +2280,12 @@ class KalturaSearchResult extends KalturaSearch
 
 }
 
-class KalturaSearchResultResponse extends KalturaObjectBase
+class BorhanSearchResultResponse extends BorhanObjectBase
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaSearchResultArray
+	 * @var BorhanSearchResultArray
 	 * @readonly
 	 */
 	public $objects;
@@ -2301,7 +2301,7 @@ class KalturaSearchResultResponse extends KalturaObjectBase
 
 }
 
-class KalturaStartWidgetSessionResponse extends KalturaObjectBase
+class BorhanStartWidgetSessionResponse extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -2330,7 +2330,7 @@ class KalturaStartWidgetSessionResponse extends KalturaObjectBase
 
 }
 
-class KalturaStatsEvent extends KalturaObjectBase
+class BorhanStatsEvent extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -2342,7 +2342,7 @@ class KalturaStatsEvent extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaStatsEventType
+	 * @var BorhanStatsEventType
 	 */
 	public $eventType = null;
 
@@ -2470,7 +2470,7 @@ class KalturaStatsEvent extends KalturaObjectBase
 
 }
 
-class KalturaUiConf extends KalturaObjectBase
+class BorhanUiConf extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -2505,7 +2505,7 @@ class KalturaUiConf extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaUiConfObjType
+	 * @var BorhanUiConfObjType
 	 */
 	public $objType = null;
 
@@ -2614,14 +2614,14 @@ class KalturaUiConf extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaUiConfCreationMode
+	 * @var BorhanUiConfCreationMode
 	 */
 	public $creationMode = null;
 
 
 }
 
-class KalturaUiConfFilter extends KalturaFilter
+class BorhanUiConfFilter extends BorhanFilter
 {
 	/**
 	 * 
@@ -2689,12 +2689,12 @@ class KalturaUiConfFilter extends KalturaFilter
 
 }
 
-class KalturaUiConfListResponse extends KalturaObjectBase
+class BorhanUiConfListResponse extends BorhanObjectBase
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaUiConfArray
+	 * @var BorhanUiConfArray
 	 * @readonly
 	 */
 	public $objects;
@@ -2710,13 +2710,13 @@ class KalturaUiConfListResponse extends KalturaObjectBase
 
 }
 
-class KalturaUiConfOrderBy
+class BorhanUiConfOrderBy
 {
 	const CREATED_AT_ASC = "+createdAt";
 	const CREATED_AT_DESC = "-createdAt";
 }
 
-class KalturaUser extends KalturaObjectBase
+class BorhanUser extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -2820,14 +2820,14 @@ class KalturaUser extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaGender
+	 * @var BorhanGender
 	 */
 	public $gender = null;
 
 	/**
 	 * 
 	 *
-	 * @var KalturaUserStatus
+	 * @var BorhanUserStatus
 	 */
 	public $status = null;
 
@@ -2879,7 +2879,7 @@ class KalturaUser extends KalturaObjectBase
 
 }
 
-class KalturaUserFilter extends KalturaFilter
+class BorhanUserFilter extends BorhanFilter
 {
 	/**
 	 * 
@@ -2961,12 +2961,12 @@ class KalturaUserFilter extends KalturaFilter
 
 }
 
-class KalturaUserListResponse extends KalturaObjectBase
+class BorhanUserListResponse extends BorhanObjectBase
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaUserArray
+	 * @var BorhanUserArray
 	 * @readonly
 	 */
 	public $objects;
@@ -2982,13 +2982,13 @@ class KalturaUserListResponse extends KalturaObjectBase
 
 }
 
-class KalturaUserOrderBy
+class BorhanUserOrderBy
 {
 	const CREATED_AT_ASC = "+createdAt";
 	const CREATED_AT_DESC = "-createdAt";
 }
 
-class KalturaWidget extends KalturaObjectBase
+class BorhanWidget extends BorhanObjectBase
 {
 	/**
 	 * 
@@ -3038,7 +3038,7 @@ class KalturaWidget extends KalturaObjectBase
 	/**
 	 * 
 	 *
-	 * @var KalturaWidgetSecurityType
+	 * @var BorhanWidgetSecurityType
 	 */
 	public $securityType = null;
 
@@ -3083,7 +3083,7 @@ class KalturaWidget extends KalturaObjectBase
 
 }
 
-class KalturaWidgetFilter extends KalturaFilter
+class BorhanWidgetFilter extends BorhanFilter
 {
 	/**
 	 * 
@@ -3172,12 +3172,12 @@ class KalturaWidgetFilter extends KalturaFilter
 
 }
 
-class KalturaWidgetListResponse extends KalturaObjectBase
+class BorhanWidgetListResponse extends BorhanObjectBase
 {
 	/**
 	 * 
 	 *
-	 * @var KalturaWidgetArray
+	 * @var BorhanWidgetArray
 	 * @readonly
 	 */
 	public $objects;
@@ -3193,21 +3193,21 @@ class KalturaWidgetListResponse extends KalturaObjectBase
 
 }
 
-class KalturaWidgetOrderBy
+class BorhanWidgetOrderBy
 {
 	const CREATED_AT_ASC = "+createdAt";
 	const CREATED_AT_DESC = "-createdAt";
 }
 
 
-class KalturaMediaService extends KalturaServiceBase
+class BorhanMediaService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function addFromUrl(KalturaMediaEntry $mediaEntry, $url)
+	function addFromUrl(BorhanMediaEntry $mediaEntry, $url)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "mediaEntry", $mediaEntry->toParams());
@@ -3217,11 +3217,11 @@ class KalturaMediaService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMediaEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMediaEntry");
 		return $resultObject;
 	}
 
-	function addFromSearchResult(KalturaMediaEntry $mediaEntry = null, KalturaSearchResult $searchResult = null)
+	function addFromSearchResult(BorhanMediaEntry $mediaEntry = null, BorhanSearchResult $searchResult = null)
 	{
 		$kparams = array();
 		if ($mediaEntry !== null)
@@ -3233,11 +3233,11 @@ class KalturaMediaService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMediaEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMediaEntry");
 		return $resultObject;
 	}
 
-	function addFromUploadedFile(KalturaMediaEntry $mediaEntry, $uploadTokenId)
+	function addFromUploadedFile(BorhanMediaEntry $mediaEntry, $uploadTokenId)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "mediaEntry", $mediaEntry->toParams());
@@ -3247,11 +3247,11 @@ class KalturaMediaService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMediaEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMediaEntry");
 		return $resultObject;
 	}
 
-	function addFromRecordedWebcam(KalturaMediaEntry $mediaEntry, $webcamTokenId)
+	function addFromRecordedWebcam(BorhanMediaEntry $mediaEntry, $webcamTokenId)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "mediaEntry", $mediaEntry->toParams());
@@ -3261,7 +3261,7 @@ class KalturaMediaService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMediaEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMediaEntry");
 		return $resultObject;
 	}
 
@@ -3275,11 +3275,11 @@ class KalturaMediaService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMediaEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMediaEntry");
 		return $resultObject;
 	}
 
-	function update($entryId, KalturaMediaEntry $mediaEntry)
+	function update($entryId, BorhanMediaEntry $mediaEntry)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "entryId", $entryId);
@@ -3289,7 +3289,7 @@ class KalturaMediaService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMediaEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMediaEntry");
 		return $resultObject;
 	}
 
@@ -3306,7 +3306,7 @@ class KalturaMediaService extends KalturaServiceBase
 		return $resultObject;
 	}
 
-	function listAction(KalturaMediaEntryFilter $filter = null, KalturaFilterPager $pager = null)
+	function listAction(BorhanMediaEntryFilter $filter = null, BorhanFilterPager $pager = null)
 	{
 		$kparams = array();
 		if ($filter !== null)
@@ -3318,7 +3318,7 @@ class KalturaMediaService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMediaListResponse");
+		$this->client->validateObjectType($resultObject, "BorhanMediaListResponse");
 		return $resultObject;
 	}
 
@@ -3346,7 +3346,7 @@ class KalturaMediaService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMediaEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMediaEntry");
 		return $resultObject;
 	}
 
@@ -3361,7 +3361,7 @@ class KalturaMediaService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMediaEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMediaEntry");
 		return $resultObject;
 	}
 
@@ -3379,7 +3379,7 @@ class KalturaMediaService extends KalturaServiceBase
 		return $resultObject;
 	}
 
-	function flag(KalturaModerationFlag $moderationFlag)
+	function flag(BorhanModerationFlag $moderationFlag)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "moderationFlag", $moderationFlag->toParams());
@@ -3418,7 +3418,7 @@ class KalturaMediaService extends KalturaServiceBase
 		return $resultObject;
 	}
 
-	function listFlags($entryId, KalturaFilterPager $pager = null)
+	function listFlags($entryId, BorhanFilterPager $pager = null)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "entryId", $entryId);
@@ -3429,19 +3429,19 @@ class KalturaMediaService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaModerationFlagListResponse");
+		$this->client->validateObjectType($resultObject, "BorhanModerationFlagListResponse");
 		return $resultObject;
 	}
 }
 
-class KalturaMixingService extends KalturaServiceBase
+class BorhanMixingService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function add(KalturaMixEntry $mixEntry)
+	function add(BorhanMixEntry $mixEntry)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "mixEntry", $mixEntry->toParams());
@@ -3450,7 +3450,7 @@ class KalturaMixingService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMixEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMixEntry");
 		return $resultObject;
 	}
 
@@ -3464,11 +3464,11 @@ class KalturaMixingService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMixEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMixEntry");
 		return $resultObject;
 	}
 
-	function update($entryId, KalturaMixEntry $mixEntry)
+	function update($entryId, BorhanMixEntry $mixEntry)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "entryId", $entryId);
@@ -3478,7 +3478,7 @@ class KalturaMixingService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMixEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMixEntry");
 		return $resultObject;
 	}
 
@@ -3495,7 +3495,7 @@ class KalturaMixingService extends KalturaServiceBase
 		return $resultObject;
 	}
 
-	function listAction(KalturaMixEntryFilter $filter = null, KalturaFilterPager $pager = null)
+	function listAction(BorhanMixEntryFilter $filter = null, BorhanFilterPager $pager = null)
 	{
 		$kparams = array();
 		if ($filter !== null)
@@ -3507,7 +3507,7 @@ class KalturaMixingService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMixListResponse");
+		$this->client->validateObjectType($resultObject, "BorhanMixListResponse");
 		return $resultObject;
 	}
 
@@ -3520,7 +3520,7 @@ class KalturaMixingService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMixEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMixEntry");
 		return $resultObject;
 	}
 
@@ -3534,7 +3534,7 @@ class KalturaMixingService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMixEntry");
+		$this->client->validateObjectType($resultObject, "BorhanMixEntry");
 		return $resultObject;
 	}
 
@@ -3581,14 +3581,14 @@ class KalturaMixingService extends KalturaServiceBase
 	}
 }
 
-class KalturaBaseEntryService extends KalturaServiceBase
+class BorhanBaseEntryService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function addFromUploadedFile(KalturaBaseEntry $entry, $uploadTokenId, $type = -1)
+	function addFromUploadedFile(BorhanBaseEntry $entry, $uploadTokenId, $type = -1)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "entry", $entry->toParams());
@@ -3599,7 +3599,7 @@ class KalturaBaseEntryService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBaseEntry");
+		$this->client->validateObjectType($resultObject, "BorhanBaseEntry");
 		return $resultObject;
 	}
 
@@ -3613,7 +3613,7 @@ class KalturaBaseEntryService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBaseEntry");
+		$this->client->validateObjectType($resultObject, "BorhanBaseEntry");
 		return $resultObject;
 	}
 
@@ -3643,7 +3643,7 @@ class KalturaBaseEntryService extends KalturaServiceBase
 		return $resultObject;
 	}
 
-	function listAction(KalturaBaseEntryFilter $filter = null, KalturaFilterPager $pager = null)
+	function listAction(BorhanBaseEntryFilter $filter = null, BorhanFilterPager $pager = null)
 	{
 		$kparams = array();
 		if ($filter !== null)
@@ -3655,14 +3655,14 @@ class KalturaBaseEntryService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBaseEntryListResponse");
+		$this->client->validateObjectType($resultObject, "BorhanBaseEntryListResponse");
 		return $resultObject;
 	}
 }
 
-class KalturaSessionService extends KalturaServiceBase
+class BorhanSessionService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
@@ -3695,19 +3695,19 @@ class KalturaSessionService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaStartWidgetSessionResponse");
+		$this->client->validateObjectType($resultObject, "BorhanStartWidgetSessionResponse");
 		return $resultObject;
 	}
 }
 
-class KalturaUiConfService extends KalturaServiceBase
+class BorhanUiConfService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function add(KalturaUiConf $uiConf)
+	function add(BorhanUiConf $uiConf)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "uiConf", $uiConf->toParams());
@@ -3716,11 +3716,11 @@ class KalturaUiConfService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaUiConf");
+		$this->client->validateObjectType($resultObject, "BorhanUiConf");
 		return $resultObject;
 	}
 
-	function update($id, KalturaUiConf $uiConf)
+	function update($id, BorhanUiConf $uiConf)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "id", $id);
@@ -3730,7 +3730,7 @@ class KalturaUiConfService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaUiConf");
+		$this->client->validateObjectType($resultObject, "BorhanUiConf");
 		return $resultObject;
 	}
 
@@ -3743,7 +3743,7 @@ class KalturaUiConfService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaUiConf");
+		$this->client->validateObjectType($resultObject, "BorhanUiConf");
 		return $resultObject;
 	}
 
@@ -3769,11 +3769,11 @@ class KalturaUiConfService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaUiConf");
+		$this->client->validateObjectType($resultObject, "BorhanUiConf");
 		return $resultObject;
 	}
 
-	function listAction(KalturaUiConfFilter $filter = null, KalturaFilterPager $pager = null)
+	function listAction(BorhanUiConfFilter $filter = null, BorhanFilterPager $pager = null)
 	{
 		$kparams = array();
 		if ($filter !== null)
@@ -3785,19 +3785,19 @@ class KalturaUiConfService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaUiConfListResponse");
+		$this->client->validateObjectType($resultObject, "BorhanUiConfListResponse");
 		return $resultObject;
 	}
 }
 
-class KalturaPlaylistService extends KalturaServiceBase
+class BorhanPlaylistService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function add(KalturaPlaylist $playlist, $updateStats = false)
+	function add(BorhanPlaylist $playlist, $updateStats = false)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "playlist", $playlist->toParams());
@@ -3807,7 +3807,7 @@ class KalturaPlaylistService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaPlaylist");
+		$this->client->validateObjectType($resultObject, "BorhanPlaylist");
 		return $resultObject;
 	}
 
@@ -3821,11 +3821,11 @@ class KalturaPlaylistService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaPlaylist");
+		$this->client->validateObjectType($resultObject, "BorhanPlaylist");
 		return $resultObject;
 	}
 
-	function update($id, KalturaPlaylist $playlist, $updateStats = false)
+	function update($id, BorhanPlaylist $playlist, $updateStats = false)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "id", $id);
@@ -3836,7 +3836,7 @@ class KalturaPlaylistService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaPlaylist");
+		$this->client->validateObjectType($resultObject, "BorhanPlaylist");
 		return $resultObject;
 	}
 
@@ -3853,7 +3853,7 @@ class KalturaPlaylistService extends KalturaServiceBase
 		return $resultObject;
 	}
 
-	function listAction(KalturaPlaylistFilter $filter = null, KalturaFilterPager $pager = null)
+	function listAction(BorhanPlaylistFilter $filter = null, BorhanFilterPager $pager = null)
 	{
 		$kparams = array();
 		if ($filter !== null)
@@ -3865,7 +3865,7 @@ class KalturaPlaylistService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaPlaylistListResponse");
+		$this->client->validateObjectType($resultObject, "BorhanPlaylistListResponse");
 		return $resultObject;
 	}
 
@@ -3908,19 +3908,19 @@ class KalturaPlaylistService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaPlaylist");
+		$this->client->validateObjectType($resultObject, "BorhanPlaylist");
 		return $resultObject;
 	}
 }
 
-class KalturaUserService extends KalturaServiceBase
+class BorhanUserService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function add(KalturaUser $user)
+	function add(BorhanUser $user)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "user", $user->toParams());
@@ -3929,11 +3929,11 @@ class KalturaUserService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaUser");
+		$this->client->validateObjectType($resultObject, "BorhanUser");
 		return $resultObject;
 	}
 
-	function update($userId, KalturaUser $user)
+	function update($userId, BorhanUser $user)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "userId", $userId);
@@ -3943,7 +3943,7 @@ class KalturaUserService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaUser");
+		$this->client->validateObjectType($resultObject, "BorhanUser");
 		return $resultObject;
 	}
 
@@ -3956,7 +3956,7 @@ class KalturaUserService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaUser");
+		$this->client->validateObjectType($resultObject, "BorhanUser");
 		return $resultObject;
 	}
 
@@ -3969,11 +3969,11 @@ class KalturaUserService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaUser");
+		$this->client->validateObjectType($resultObject, "BorhanUser");
 		return $resultObject;
 	}
 
-	function listAction(KalturaUserFilter $filter = null, KalturaFilterPager $pager = null)
+	function listAction(BorhanUserFilter $filter = null, BorhanFilterPager $pager = null)
 	{
 		$kparams = array();
 		if ($filter !== null)
@@ -3985,19 +3985,19 @@ class KalturaUserService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaUserListResponse");
+		$this->client->validateObjectType($resultObject, "BorhanUserListResponse");
 		return $resultObject;
 	}
 }
 
-class KalturaWidgetService extends KalturaServiceBase
+class BorhanWidgetService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function add(KalturaWidget $widget)
+	function add(BorhanWidget $widget)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "widget", $widget->toParams());
@@ -4006,11 +4006,11 @@ class KalturaWidgetService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaWidget");
+		$this->client->validateObjectType($resultObject, "BorhanWidget");
 		return $resultObject;
 	}
 
-	function update($id, KalturaWidget $widget)
+	function update($id, BorhanWidget $widget)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "id", $id);
@@ -4020,7 +4020,7 @@ class KalturaWidgetService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaWidget");
+		$this->client->validateObjectType($resultObject, "BorhanWidget");
 		return $resultObject;
 	}
 
@@ -4033,11 +4033,11 @@ class KalturaWidgetService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaWidget");
+		$this->client->validateObjectType($resultObject, "BorhanWidget");
 		return $resultObject;
 	}
 
-	function cloneAction(KalturaWidget $widget)
+	function cloneAction(BorhanWidget $widget)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "widget", $widget->toParams());
@@ -4046,11 +4046,11 @@ class KalturaWidgetService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaWidget");
+		$this->client->validateObjectType($resultObject, "BorhanWidget");
 		return $resultObject;
 	}
 
-	function listAction(KalturaWidgetFilter $filter = null, KalturaFilterPager $pager = null)
+	function listAction(BorhanWidgetFilter $filter = null, BorhanFilterPager $pager = null)
 	{
 		$kparams = array();
 		if ($filter !== null)
@@ -4062,19 +4062,19 @@ class KalturaWidgetService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaWidgetListResponse");
+		$this->client->validateObjectType($resultObject, "BorhanWidgetListResponse");
 		return $resultObject;
 	}
 }
 
-class KalturaSearchService extends KalturaServiceBase
+class BorhanSearchService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function search(KalturaSearch $search, KalturaFilterPager $pager = null)
+	function search(BorhanSearch $search, BorhanFilterPager $pager = null)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "search", $search->toParams());
@@ -4085,11 +4085,11 @@ class KalturaSearchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaSearchResultResponse");
+		$this->client->validateObjectType($resultObject, "BorhanSearchResultResponse");
 		return $resultObject;
 	}
 
-	function getMediaInfo(KalturaSearchResult $searchResult)
+	function getMediaInfo(BorhanSearchResult $searchResult)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "searchResult", $searchResult->toParams());
@@ -4098,7 +4098,7 @@ class KalturaSearchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaSearchResult");
+		$this->client->validateObjectType($resultObject, "BorhanSearchResult");
 		return $resultObject;
 	}
 
@@ -4112,19 +4112,19 @@ class KalturaSearchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaSearchResult");
+		$this->client->validateObjectType($resultObject, "BorhanSearchResult");
 		return $resultObject;
 	}
 }
 
-class KalturaPartnerService extends KalturaServiceBase
+class BorhanPartnerService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function register(KalturaPartner $partner, $cmsPassword = "")
+	function register(BorhanPartner $partner, $cmsPassword = "")
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "partner", $partner->toParams());
@@ -4134,11 +4134,11 @@ class KalturaPartnerService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaPartner");
+		$this->client->validateObjectType($resultObject, "BorhanPartner");
 		return $resultObject;
 	}
 
-	function update(KalturaPartner $partner, $allowEmpty = false)
+	function update(BorhanPartner $partner, $allowEmpty = false)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "partner", $partner->toParams());
@@ -4148,7 +4148,7 @@ class KalturaPartnerService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaPartner");
+		$this->client->validateObjectType($resultObject, "BorhanPartner");
 		return $resultObject;
 	}
 
@@ -4163,7 +4163,7 @@ class KalturaPartnerService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaPartner");
+		$this->client->validateObjectType($resultObject, "BorhanPartner");
 		return $resultObject;
 	}
 
@@ -4175,7 +4175,7 @@ class KalturaPartnerService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaPartner");
+		$this->client->validateObjectType($resultObject, "BorhanPartner");
 		return $resultObject;
 	}
 
@@ -4190,14 +4190,14 @@ class KalturaPartnerService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaPartnerUsage");
+		$this->client->validateObjectType($resultObject, "BorhanPartnerUsage");
 		return $resultObject;
 	}
 }
 
-class KalturaAdminUserService extends KalturaServiceBase
+class BorhanAdminUserService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
@@ -4214,7 +4214,7 @@ class KalturaAdminUserService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaAdminUser");
+		$this->client->validateObjectType($resultObject, "BorhanAdminUser");
 		return $resultObject;
 	}
 
@@ -4246,9 +4246,9 @@ class KalturaAdminUserService extends KalturaServiceBase
 	}
 }
 
-class KalturaSystemService extends KalturaServiceBase
+class BorhanSystemService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
@@ -4266,9 +4266,9 @@ class KalturaSystemService extends KalturaServiceBase
 	}
 }
 
-class KalturaBulkUploadService extends KalturaServiceBase
+class BorhanBulkUploadService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
@@ -4284,7 +4284,7 @@ class KalturaBulkUploadService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBulkUpload");
+		$this->client->validateObjectType($resultObject, "BorhanBulkUpload");
 		return $resultObject;
 	}
 
@@ -4297,11 +4297,11 @@ class KalturaBulkUploadService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBulkUpload");
+		$this->client->validateObjectType($resultObject, "BorhanBulkUpload");
 		return $resultObject;
 	}
 
-	function listAction(KalturaFilterPager $pager = null)
+	function listAction(BorhanFilterPager $pager = null)
 	{
 		$kparams = array();
 		if ($pager !== null)
@@ -4311,14 +4311,14 @@ class KalturaBulkUploadService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBulkUploadListResponse");
+		$this->client->validateObjectType($resultObject, "BorhanBulkUploadListResponse");
 		return $resultObject;
 	}
 }
 
-class KalturaNotificationService extends KalturaServiceBase
+class BorhanNotificationService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
@@ -4333,19 +4333,19 @@ class KalturaNotificationService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaClientNotification");
+		$this->client->validateObjectType($resultObject, "BorhanClientNotification");
 		return $resultObject;
 	}
 }
 
-class KalturaBatchService extends KalturaServiceBase
+class BorhanBatchService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function addImportJob(KalturaBatchJob $importJob)
+	function addImportJob(BorhanBatchJob $importJob)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "importJob", $importJob->toParams());
@@ -4354,7 +4354,7 @@ class KalturaBatchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBatchJob");
+		$this->client->validateObjectType($resultObject, "BorhanBatchJob");
 		return $resultObject;
 	}
 
@@ -4375,7 +4375,7 @@ class KalturaBatchService extends KalturaServiceBase
 		return $resultObject;
 	}
 
-	function updateExclusiveImportJob($id, $processorLocation, $pocessorName, KalturaBatchJob $importJob, $entryStatus = null)
+	function updateExclusiveImportJob($id, $processorLocation, $pocessorName, BorhanBatchJob $importJob, $entryStatus = null)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "id", $id);
@@ -4388,7 +4388,7 @@ class KalturaBatchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBatchJob");
+		$this->client->validateObjectType($resultObject, "BorhanBatchJob");
 		return $resultObject;
 	}
 
@@ -4403,11 +4403,11 @@ class KalturaBatchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBatchJob");
+		$this->client->validateObjectType($resultObject, "BorhanBatchJob");
 		return $resultObject;
 	}
 
-	function addPreConvertJob(KalturaBatchJob $preConvertJob)
+	function addPreConvertJob(BorhanBatchJob $preConvertJob)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "preConvertJob", $preConvertJob->toParams());
@@ -4416,7 +4416,7 @@ class KalturaBatchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBatchJob");
+		$this->client->validateObjectType($resultObject, "BorhanBatchJob");
 		return $resultObject;
 	}
 
@@ -4437,7 +4437,7 @@ class KalturaBatchService extends KalturaServiceBase
 		return $resultObject;
 	}
 
-	function updateExclusivePreConvertJob($id, $processorLocation, $pocessorName, KalturaBatchJob $preConvertJob, $entryStatus = null)
+	function updateExclusivePreConvertJob($id, $processorLocation, $pocessorName, BorhanBatchJob $preConvertJob, $entryStatus = null)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "id", $id);
@@ -4450,7 +4450,7 @@ class KalturaBatchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBatchJob");
+		$this->client->validateObjectType($resultObject, "BorhanBatchJob");
 		return $resultObject;
 	}
 
@@ -4465,11 +4465,11 @@ class KalturaBatchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBatchJob");
+		$this->client->validateObjectType($resultObject, "BorhanBatchJob");
 		return $resultObject;
 	}
 
-	function createNotification(KalturaNotification $notificationJob)
+	function createNotification(BorhanNotification $notificationJob)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "notificationJob", $notificationJob->toParams());
@@ -4495,11 +4495,11 @@ class KalturaBatchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBatchGetExclusiveNotificationJobsResponse");
+		$this->client->validateObjectType($resultObject, "BorhanBatchGetExclusiveNotificationJobsResponse");
 		return $resultObject;
 	}
 
-	function updateExclusiveNotificationJob($id, $processorLocation, $pocessorName, KalturaNotification $notificationJob)
+	function updateExclusiveNotificationJob($id, $processorLocation, $pocessorName, BorhanNotification $notificationJob)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "id", $id);
@@ -4511,11 +4511,11 @@ class KalturaBatchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaNotification");
+		$this->client->validateObjectType($resultObject, "BorhanNotification");
 		return $resultObject;
 	}
 
-	function freeExclusiveNotificationJob($id, $processorLocation, $pocessorName, KalturaNotification $notificationJob = null)
+	function freeExclusiveNotificationJob($id, $processorLocation, $pocessorName, BorhanNotification $notificationJob = null)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "id", $id);
@@ -4528,11 +4528,11 @@ class KalturaBatchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaBatchJob");
+		$this->client->validateObjectType($resultObject, "BorhanBatchJob");
 		return $resultObject;
 	}
 
-	function addMailJob(KalturaMailJob $mailJob)
+	function addMailJob(BorhanMailJob $mailJob)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "mailJob", $mailJob->toParams());
@@ -4562,7 +4562,7 @@ class KalturaBatchService extends KalturaServiceBase
 		return $resultObject;
 	}
 
-	function updateExclusiveMailJob($id, $processorLocation, $pocessorName, KalturaMailJob $mailJob)
+	function updateExclusiveMailJob($id, $processorLocation, $pocessorName, BorhanMailJob $mailJob)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "id", $id);
@@ -4574,7 +4574,7 @@ class KalturaBatchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMailJob");
+		$this->client->validateObjectType($resultObject, "BorhanMailJob");
 		return $resultObject;
 	}
 
@@ -4589,14 +4589,14 @@ class KalturaBatchService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaMailJob");
+		$this->client->validateObjectType($resultObject, "BorhanMailJob");
 		return $resultObject;
 	}
 }
 
-class KalturaReportService extends KalturaServiceBase
+class BorhanReportService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
@@ -4609,11 +4609,11 @@ class KalturaReportService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaReportGraph");
+		$this->client->validateObjectType($resultObject, "BorhanReportGraph");
 		return $resultObject;
 	}
 
-	function getGraphs($reportType, KalturaReportInputFilter $reportInputFilter, $dimension = null, $objectIds = null)
+	function getGraphs($reportType, BorhanReportInputFilter $reportInputFilter, $dimension = null, $objectIds = null)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "reportType", $reportType);
@@ -4629,7 +4629,7 @@ class KalturaReportService extends KalturaServiceBase
 		return $resultObject;
 	}
 
-	function getTotal($reportType, KalturaReportInputFilter $reportInputFilter, $objectIds = null)
+	function getTotal($reportType, BorhanReportInputFilter $reportInputFilter, $objectIds = null)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "reportType", $reportType);
@@ -4640,11 +4640,11 @@ class KalturaReportService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaReportTotal");
+		$this->client->validateObjectType($resultObject, "BorhanReportTotal");
 		return $resultObject;
 	}
 
-	function getTable($reportType, KalturaReportInputFilter $reportInputFilter, KalturaFilterPager $pager, $order = null, $objectIds = null)
+	function getTable($reportType, BorhanReportInputFilter $reportInputFilter, BorhanFilterPager $pager, $order = null, $objectIds = null)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "reportType", $reportType);
@@ -4657,11 +4657,11 @@ class KalturaReportService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaReportTable");
+		$this->client->validateObjectType($resultObject, "BorhanReportTable");
 		return $resultObject;
 	}
 
-	function getUrlForReportAsCsv($reportTitle, $reportText, $headers, $reportType, KalturaReportInputFilter $reportInputFilter, $dimension = null, KalturaFilterPager $pager = null, $order = null, $objectIds = null)
+	function getUrlForReportAsCsv($reportTitle, $reportText, $headers, $reportType, BorhanReportInputFilter $reportInputFilter, $dimension = null, BorhanFilterPager $pager = null, $order = null, $objectIds = null)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "reportTitle", $reportTitle);
@@ -4684,14 +4684,14 @@ class KalturaReportService extends KalturaServiceBase
 	}
 }
 
-class KalturaConversionProfileService extends KalturaServiceBase
+class BorhanConversionProfileService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function addCurrent(KalturaConversionProfile $conversionProfile)
+	function addCurrent(BorhanConversionProfile $conversionProfile)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "conversionProfile", $conversionProfile->toParams());
@@ -4700,7 +4700,7 @@ class KalturaConversionProfileService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaConversionProfile");
+		$this->client->validateObjectType($resultObject, "BorhanConversionProfile");
 		return $resultObject;
 	}
 
@@ -4712,19 +4712,19 @@ class KalturaConversionProfileService extends KalturaServiceBase
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaConversionProfile");
+		$this->client->validateObjectType($resultObject, "BorhanConversionProfile");
 		return $resultObject;
 	}
 }
 
-class KalturaStatsService extends KalturaServiceBase
+class BorhanStatsService extends BorhanServiceBase
 {
-	function __construct(KalturaClient $client)
+	function __construct(BorhanClient $client)
 	{
 		parent::__construct($client);
 	}
 
-	function collect(KalturaStatsEvent $event)
+	function collect(BorhanStatsEvent $event)
 	{
 		$kparams = array();
 		$this->client->addParam($kparams, "event", $event->toParams());
@@ -4737,56 +4737,56 @@ class KalturaStatsService extends KalturaServiceBase
 		return $resultObject;
 	}
 
-	function reportKceError(KalturaCEError $kalturaCEError)
+	function reportKceError(BorhanCEError $borhanCEError)
 	{
 		$kparams = array();
-		$this->client->addParam($kparams, "kalturaCEError", $kalturaCEError->toParams());
+		$this->client->addParam($kparams, "borhanCEError", $borhanCEError->toParams());
 		$this->client->queueServiceActionCall("stats", "reportKceError", $kparams);
 		if ($this->client->isMultiRequest())
 			return null;
 		$resultObject = $this->client->doQueue();
 		$this->client->throwExceptionIfError($resultObject);
-		$this->client->validateObjectType($resultObject, "KalturaCEError");
+		$this->client->validateObjectType($resultObject, "BorhanCEError");
 		return $resultObject;
 	}
 }
 
-class KalturaClient extends KalturaClientBase
+class BorhanClient extends BorhanClientBase
 {
 	/**
 	 * Media service lets you upload and manage media files (images / videos & audio)
 	 *
-	 * @var KalturaMediaService
+	 * @var BorhanMediaService
 	 */
 	public $media = null;
 
 	/**
-	 * A Mix is an XML unique format invented by Kaltura, it allows the user to create a mix of videos and images, in and out points, transitions, text overlays, soundtrack, effects and much more...
+	 * A Mix is an XML unique format invented by Borhan, it allows the user to create a mix of videos and images, in and out points, transitions, text overlays, soundtrack, effects and much more...
 	 * Mixing service lets you create a new mix, manage its metadata and make basic manipulations.   
 	 *
-	 * @var KalturaMixingService
+	 * @var BorhanMixingService
 	 */
 	public $mixing = null;
 
 	/**
 	 * Base Entry Service
 	 *
-	 * @var KalturaBaseEntryService
+	 * @var BorhanBaseEntryService
 	 */
 	public $baseEntry = null;
 
 	/**
 	 * Session service
 	 *
-	 * @var KalturaSessionService
+	 * @var BorhanSessionService
 	 */
 	public $session = null;
 
 	/**
 	 * UiConf service lets you create and manage your UIConfs for the various flash components
-	 * This service is used by the KMC-ApplicationStudio
+	 * This service is used by the BMC-ApplicationStudio
 	 *
-	 * @var KalturaUiConfService
+	 * @var BorhanUiConfService
 	 */
 	public $uiConf = null;
 
@@ -4794,22 +4794,22 @@ class KalturaClient extends KalturaClientBase
 	 * Playlist service lets you create,manage and play your playlists
 	 * Playlists could be static (containing a fixed list of entries) or dynamic (baseed on a filter)
 	 *
-	 * @var KalturaPlaylistService
+	 * @var BorhanPlaylistService
 	 */
 	public $playlist = null;
 
 	/**
-	 * Manage partner users on Kaltura's side
-	 * The userId in kaltura is the unique Id in the partner's system, and the [partnerId,Id] couple are unique key in kaltura's DB
+	 * Manage partner users on Borhan's side
+	 * The userId in borhan is the unique Id in the partner's system, and the [partnerId,Id] couple are unique key in borhan's DB
 	 *
-	 * @var KalturaUserService
+	 * @var BorhanUserService
 	 */
 	public $user = null;
 
 	/**
 	 * widget service for full widget management
 	 *
-	 * @var KalturaWidgetService
+	 * @var BorhanWidgetService
 	 */
 	public $widget = null;
 
@@ -4817,42 +4817,42 @@ class KalturaClient extends KalturaClientBase
 	 * Search service allows you to search for media in various media providers
 	 * This service is being used mostly by the CW component
 	 *
-	 * @var KalturaSearchService
+	 * @var BorhanSearchService
 	 */
 	public $search = null;
 
 	/**
 	 * partner service allows you to change/manage your partner personal details and settings as well
 	 *
-	 * @var KalturaPartnerService
+	 * @var BorhanPartnerService
 	 */
 	public $partner = null;
 
 	/**
 	 * adminuser service
 	 *
-	 * @var KalturaAdminUserService
+	 * @var BorhanAdminUserService
 	 */
 	public $adminUser = null;
 
 	/**
 	 * System Service
 	 *
-	 * @var KalturaSystemService
+	 * @var BorhanSystemService
 	 */
 	public $system = null;
 
 	/**
 	 * Bulk Upload Service
 	 *
-	 * @var KalturaBulkUploadService
+	 * @var BorhanBulkUploadService
 	 */
 	public $bulkUpload = null;
 
 	/**
 	 * Notification Service
 	 *
-	 * @var KalturaNotificationService
+	 * @var BorhanNotificationService
 	 */
 	public $notification = null;
 
@@ -4864,52 +4864,52 @@ class KalturaClient extends KalturaClientBase
 	 * acuiring a batch objet properly (using  GetExclusiveXXX).
 	 * If an object was aquired and should be returned to the pool in it's initial state - use the FreeExclusiveXXX action 
 	 *
-	 * @var KalturaBatchService
+	 * @var BorhanBatchService
 	 */
 	public $batch = null;
 
 	/**
 	 * api for getting reports data by the report type and some inputFilter
 	 *
-	 * @var KalturaReportService
+	 * @var BorhanReportService
 	 */
 	public $report = null;
 
 	/**
 	 * Conversion Profile Service
 	 *
-	 * @var KalturaConversionProfileService
+	 * @var BorhanConversionProfileService
 	 */
 	public $conversionProfile = null;
 
 	/**
 	 * Stats Service
 	 *
-	 * @var KalturaStatsService
+	 * @var BorhanStatsService
 	 */
 	public $stats = null;
 
 
-	public function __construct(KalturaConfiguration $config)
+	public function __construct(BorhanConfiguration $config)
 	{
 		parent::__construct($config);
-		$this->media = new KalturaMediaService($this);
-		$this->mixing = new KalturaMixingService($this);
-		$this->baseEntry = new KalturaBaseEntryService($this);
-		$this->session = new KalturaSessionService($this);
-		$this->uiConf = new KalturaUiConfService($this);
-		$this->playlist = new KalturaPlaylistService($this);
-		$this->user = new KalturaUserService($this);
-		$this->widget = new KalturaWidgetService($this);
-		$this->search = new KalturaSearchService($this);
-		$this->partner = new KalturaPartnerService($this);
-		$this->adminUser = new KalturaAdminUserService($this);
-		$this->system = new KalturaSystemService($this);
-		$this->bulkUpload = new KalturaBulkUploadService($this);
-		$this->notification = new KalturaNotificationService($this);
-		$this->batch = new KalturaBatchService($this);
-		$this->report = new KalturaReportService($this);
-		$this->conversionProfile = new KalturaConversionProfileService($this);
-		$this->stats = new KalturaStatsService($this);
+		$this->media = new BorhanMediaService($this);
+		$this->mixing = new BorhanMixingService($this);
+		$this->baseEntry = new BorhanBaseEntryService($this);
+		$this->session = new BorhanSessionService($this);
+		$this->uiConf = new BorhanUiConfService($this);
+		$this->playlist = new BorhanPlaylistService($this);
+		$this->user = new BorhanUserService($this);
+		$this->widget = new BorhanWidgetService($this);
+		$this->search = new BorhanSearchService($this);
+		$this->partner = new BorhanPartnerService($this);
+		$this->adminUser = new BorhanAdminUserService($this);
+		$this->system = new BorhanSystemService($this);
+		$this->bulkUpload = new BorhanBulkUploadService($this);
+		$this->notification = new BorhanNotificationService($this);
+		$this->batch = new BorhanBatchService($this);
+		$this->report = new BorhanReportService($this);
+		$this->conversionProfile = new BorhanConversionProfileService($this);
+		$this->stats = new BorhanStatsService($this);
 	}
 }

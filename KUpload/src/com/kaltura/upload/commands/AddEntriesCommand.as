@@ -1,21 +1,21 @@
-package com.kaltura.upload.commands
+package com.borhan.upload.commands
 {
-	import com.kaltura.KalturaClient;
-	import com.kaltura.commands.MultiRequest;
-	import com.kaltura.commands.baseEntry.BaseEntryAddFromUploadedFile;
-	import com.kaltura.commands.media.MediaAddFromUploadedFile;
-	import com.kaltura.commands.notification.NotificationGetClientNotification;
-	import com.kaltura.events.KalturaEvent;
-	import com.kaltura.types.KalturaMediaType;
-	import com.kaltura.types.KalturaNotificationType;
-	import com.kaltura.upload.business.PartnerNotificationVO;
-	import com.kaltura.upload.errors.KsuError;
-	import com.kaltura.upload.events.KUploadErrorEvent;
-	import com.kaltura.upload.events.KUploadEvent;
-	import com.kaltura.upload.vo.FileVO;
-	import com.kaltura.vo.KalturaBaseEntry;
-	import com.kaltura.vo.KalturaClientNotification;
-	import com.kaltura.vo.KalturaMediaEntry;
+	import com.borhan.BorhanClient;
+	import com.borhan.commands.MultiRequest;
+	import com.borhan.commands.baseEntry.BaseEntryAddFromUploadedFile;
+	import com.borhan.commands.media.MediaAddFromUploadedFile;
+	import com.borhan.commands.notification.NotificationGetClientNotification;
+	import com.borhan.events.BorhanEvent;
+	import com.borhan.types.BorhanMediaType;
+	import com.borhan.types.BorhanNotificationType;
+	import com.borhan.upload.business.PartnerNotificationVO;
+	import com.borhan.upload.errors.KsuError;
+	import com.borhan.upload.events.KUploadErrorEvent;
+	import com.borhan.upload.events.KUploadEvent;
+	import com.borhan.upload.vo.FileVO;
+	import com.borhan.vo.BorhanBaseEntry;
+	import com.borhan.vo.BorhanClientNotification;
+	import com.borhan.vo.BorhanMediaEntry;
 	
 	import flash.events.Event;
 
@@ -38,82 +38,82 @@ package com.kaltura.upload.commands
 			for each (var fileVo:FileVO in model.files) {
 				//media entry
 				if (fileVo.mediaTypeCode && (
-					(fileVo.mediaTypeCode == KalturaMediaType.AUDIO.toString()) 
-					|| (fileVo.mediaTypeCode == KalturaMediaType.VIDEO.toString())
-					|| (fileVo.mediaTypeCode == KalturaMediaType.IMAGE.toString()))) 
+					(fileVo.mediaTypeCode == BorhanMediaType.AUDIO.toString()) 
+					|| (fileVo.mediaTypeCode == BorhanMediaType.VIDEO.toString())
+					|| (fileVo.mediaTypeCode == BorhanMediaType.IMAGE.toString()))) 
 				{
-					var mediaEntry:KalturaMediaEntry = new KalturaMediaEntry();
+					var mediaEntry:BorhanMediaEntry = new BorhanMediaEntry();
 					mediaEntry.mediaType = parseInt(fileVo.mediaTypeCode);
-					updateKalturaBaseEntry(fileVo, mediaEntry as KalturaBaseEntry);
+					updateBorhanBaseEntry(fileVo, mediaEntry as BorhanBaseEntry);
 					var addMediaEntry:MediaAddFromUploadedFile = new MediaAddFromUploadedFile(mediaEntry, fileVo.token);
 					mr.addAction(addMediaEntry);
 				}
 				//base entry
 				else
 				{
-					var kalturaEntry:KalturaBaseEntry = new KalturaBaseEntry();
-					updateKalturaBaseEntry(fileVo, kalturaEntry);
-					var addEntry:BaseEntryAddFromUploadedFile = new BaseEntryAddFromUploadedFile (kalturaEntry, fileVo.token, fileVo.entryType);
+					var borhanEntry:BorhanBaseEntry = new BorhanBaseEntry();
+					updateBorhanBaseEntry(fileVo, borhanEntry);
+					var addEntry:BaseEntryAddFromUploadedFile = new BaseEntryAddFromUploadedFile (borhanEntry, fileVo.token, fileVo.entryType);
 					mr.addAction(addEntry);
 				}
 				requestIndex++;
 				//get notifications for entry
-				var getNotification:NotificationGetClientNotification = new NotificationGetClientNotification('entryId', KalturaNotificationType.ENTRY_ADD);
+				var getNotification:NotificationGetClientNotification = new NotificationGetClientNotification('entryId', BorhanNotificationType.ENTRY_ADD);
 				mr.mapMultiRequestParam(requestIndex - 1, 'id', requestIndex, 'entryId')
 				mr.addAction(getNotification);
 				requestIndex++;
 			}
 
-			mr.addEventListener(KalturaEvent.COMPLETE, result);
-			mr.addEventListener(KalturaEvent.FAILED, fault);
+			mr.addEventListener(BorhanEvent.COMPLETE, result);
+			mr.addEventListener(BorhanEvent.FAILED, fault);
 			
 			model.context.kc.post(mr);
 		}
 		
 		/**
-		 * updates the given  KalturaBaseEntry according to the given fileVO
+		 * updates the given  BorhanBaseEntry according to the given fileVO
 		 * @param fileVo the given FileVO
-		 * @param kalturaBaseEntry the given baseEntry
-		 * @return kalturaBaseEntry
+		 * @param borhanBaseEntry the given baseEntry
+		 * @return borhanBaseEntry
 		 * 
 		 */		
-		private function updateKalturaBaseEntry(fileVo:FileVO, kalturaBaseEntry:KalturaBaseEntry):void {
-			kalturaBaseEntry.name	= fileVo.title;
-			kalturaBaseEntry.creditUserName = model.screenName;
-			kalturaBaseEntry.creditUrl = model.siteUrl;
+		private function updateBorhanBaseEntry(fileVo:FileVO, borhanBaseEntry:BorhanBaseEntry):void {
+			borhanBaseEntry.name	= fileVo.title;
+			borhanBaseEntry.creditUserName = model.screenName;
+			borhanBaseEntry.creditUrl = model.siteUrl;
 			
 			// Ignoring letter capitalization in the file's extension.
 			var lowered:String = fileVo.extension.toLowerCase();
 			if (model.conversionMapping != null && model.conversionMapping[lowered] != null){
-				kalturaBaseEntry.conversionQuality = model.conversionMapping[lowered];
-				kalturaBaseEntry.conversionProfileId = parseInt(model.conversionMapping[lowered]);
+				borhanBaseEntry.conversionQuality = model.conversionMapping[lowered];
+				borhanBaseEntry.conversionProfileId = parseInt(model.conversionMapping[lowered]);
 			} 
 			else if (model.conversionProfile) {
-				kalturaBaseEntry.conversionQuality = model.conversionProfile;
-				kalturaBaseEntry.conversionProfileId = parseInt(model.conversionProfile);
+				borhanBaseEntry.conversionQuality = model.conversionProfile;
+				borhanBaseEntry.conversionProfileId = parseInt(model.conversionProfile);
 			}
 			
-			kalturaBaseEntry.userId = model.context.userId;
+			borhanBaseEntry.userId = model.context.userId;
 			
 			if (fileVo.tags.length > 0)
-				kalturaBaseEntry.tags	= fileVo.tags.join(",");
+				borhanBaseEntry.tags	= fileVo.tags.join(",");
 			
 			if (model.context.partnerData)
-				kalturaBaseEntry.partnerData = model.context.partnerData;
+				borhanBaseEntry.partnerData = model.context.partnerData;
 			
 			if (model.context.groupId)
-				kalturaBaseEntry.groupId = parseInt(model.context.groupId);
+				borhanBaseEntry.groupId = parseInt(model.context.groupId);
 		}
 		
 		/**
 		 * handle result for "addentries" multirequest
 		 * */
-		private function result (event:KalturaEvent) : void {
+		private function result (event:BorhanEvent) : void {
 			var resultArray:Array = event.data as Array;
 			var notificationsArray:Array = new Array();
 			for (var i:int = 0; i< resultArray.length; i++) {
-				if (resultArray[i] is KalturaBaseEntry) {
-					var entry:KalturaBaseEntry = resultArray[i] as KalturaBaseEntry;
+				if (resultArray[i] is BorhanBaseEntry) {
+					var entry:BorhanBaseEntry = resultArray[i] as BorhanBaseEntry;
 					//location in model.files is always /2 since we also count here the notification requests
 					(model.files[i/2] as FileVO).entryId = entry.id;
 					(model.files[i/2] as FileVO).thumbnailUrl = entry.thumbnailUrl;
@@ -123,8 +123,8 @@ package com.kaltura.upload.commands
 				}
 				//following response is for the get notofication request
 				i++;
-				if (resultArray[i] is KalturaClientNotification) {
-					var notification:KalturaClientNotification = (resultArray[i] as KalturaClientNotification);
+				if (resultArray[i] is BorhanClientNotification) {
+					var notification:BorhanClientNotification = (resultArray[i] as BorhanClientNotification);
 					var partnerNot:PartnerNotificationVO = new PartnerNotificationVO(notification.url, notification.data );
 					notificationsArray.push(partnerNot);
 				}

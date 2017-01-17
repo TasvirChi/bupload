@@ -1,4 +1,4 @@
-package com.kaltura.upload.events
+package com.borhan.upload.events
 {
 	import flash.events.Event;
 

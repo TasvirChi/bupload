@@ -1,7 +1,7 @@
-package com.kaltura.upload.model
+package com.borhan.upload.model
 {
-	import com.kaltura.upload.vo.FileFilterVO;
-	import com.kaltura.upload.vo.FileVO;
+	import com.borhan.upload.vo.FileFilterVO;
+	import com.borhan.upload.vo.FileVO;
 	
 	import flash.utils.Dictionary;
 
@@ -21,7 +21,7 @@ package com.kaltura.upload.model
 		public var partnerId:String;
 		public var subPId:String;
 		public var externalInterfaceEnable:Boolean;
-		public var host:String = "http://www.kaltura.com";
+		public var host:String = "http://www.borhan.com";
 
 
 		public var screenName:String;

@@ -3,11 +3,11 @@
 
 <!--include external scripts and define constants -->
 <?php 
-	require_once("kaltura_client_v3/KalturaClient.php"); 
+	require_once("borhan_client_v3/BorhanClient.php"); 
 	
 	//define constants
-	define("KALTURA_PARTNER_ID", 321011);
-	define("KALTURA_PARTNER_WEB_SERVICE_SECRET", "5832f358f01e0b0da9c2cb64ff7f05b2");
+	define("BORHAN_PARTNER_ID", 321011);
+	define("BORHAN_PARTNER_WEB_SERVICE_SECRET", "5832f358f01e0b0da9c2cb64ff7f05b2");
 	
 	define("KSU_UICONFID", 25740421); 
 	
@@ -15,10 +15,10 @@
 	$partnerUserID          = 'yuval';
 	
 	
-	//Construction of Kaltura objects for session initiation
-	$config           = new KalturaConfiguration(KALTURA_PARTNER_ID);
-	$client           = new KalturaClient($config);
-	$ks               = $client->session->start(KALTURA_PARTNER_WEB_SERVICE_SECRET, $partnerUserID, KalturaSessionType::USER, KALTURA_PARTNER_ID);
+	//Construction of Borhan objects for session initiation
+	$config           = new BorhanConfiguration(BORHAN_PARTNER_ID);
+	$client           = new BorhanClient($config);
+	$ks               = $client->session->start(BORHAN_PARTNER_WEB_SERVICE_SECRET, $partnerUserID, BorhanSessionType::USER, BORHAN_PARTNER_ID);
 
 ?>
 
@@ -85,7 +85,7 @@
 		
 	}
 
-	//This handler fires up when the uploaded files are set as entries in the KMC.
+	//This handler fires up when the uploaded files are set as entries in the BMC.
 	delegate.entriesAddedHandler = function(entries)
 	{
 		parent.frames["Results"].document.getElementById("txtResults").value = parent.frames["Results"].document.getElementById("txtResults").value + "Done!\n\n";
@@ -111,7 +111,7 @@
 		console.log("ui conf loading error");
 	}
 
-	<!--- JavaScript callback methods to activate Kaltura services via the KSU widget.-->
+	<!--- JavaScript callback methods to activate Borhan services via the KSU widget.-->
 	
 	//This function fires the upload
 	function upload()
@@ -148,7 +148,7 @@
 		parent.parent.frames["Steps"].document.getElementById("Step5").style.display = "";
 	}
 
-	//This function connect to the Kaltura networks and adds the uploaded content as entries into the KMC
+	//This function connect to the Borhan networks and adds the uploaded content as entries into the BMC
 	function addEntries()
 	{
 		flashObj.addEntries();
@@ -313,13 +313,13 @@
                 // set flashVar object
                 var flashVars = {
 							uid: "<?PHP echo "$partnerUserID" ?>",
-							partnerId: <?php echo KALTURA_PARTNER_ID; ?>,
+							partnerId: <?php echo BORHAN_PARTNER_ID; ?>,
 							entryId: -1,
 							ks: "<?PHP echo "$ks" ?>",
 							uiConfId: <?php echo KSU_UICONFID; ?>,
 							jsDelegate: "delegate" };
 				
-                swfobject.embedSWF("http://www.kaltura.com/kupload/ui_conf_id/<?php echo KSU_UICONFID; ?>", "uploader", "180", "20", "9.0.0", "expressInstall.swf",flashVars, params,attributes);
+                swfobject.embedSWF("http://www.borhan.com/kupload/ui_conf_id/<?php echo KSU_UICONFID; ?>", "uploader", "180", "20", "9.0.0", "expressInstall.swf",flashVars, params,attributes);
 		</script>
 	
 

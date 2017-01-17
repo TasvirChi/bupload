@@ -1,4 +1,4 @@
-package com.kaltura.net
+package com.borhan.net
 {
 	import flash.events.Event;
 	import flash.events.EventDispatcher;

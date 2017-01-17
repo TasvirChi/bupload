@@ -1,4 +1,4 @@
-package com.kaltura.upload.business
+package com.borhan.upload.business
 {
 	public class AddEntriesResult
 	{

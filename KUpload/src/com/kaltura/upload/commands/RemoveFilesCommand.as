@@ -1,6 +1,6 @@
-package com.kaltura.upload.commands
+package com.borhan.upload.commands
 {
-	import com.kaltura.upload.errors.KsuError;
+	import com.borhan.upload.errors.KsuError;
 
 	public class RemoveFilesCommand extends BaseUploadCommand
 	{

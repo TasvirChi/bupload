@@ -1,16 +1,16 @@
-package com.kaltura.upload.commands {
-	import com.kaltura.KalturaClient;
-	import com.kaltura.commands.uiConf.UiConfGet;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.events.KalturaEvent;
-	import com.kaltura.net.TemplateURLVariables;
-	import com.kaltura.upload.enums.KUploadStates;
-	import com.kaltura.upload.errors.KsuError;
-	import com.kaltura.upload.events.KUploadErrorEvent;
-	import com.kaltura.upload.events.KUploadEvent;
-	import com.kaltura.upload.vo.FileFilterVO;
-	import com.kaltura.utils.KConfigUtil;
-	import com.kaltura.vo.KalturaUiConf;
+package com.borhan.upload.commands {
+	import com.borhan.BorhanClient;
+	import com.borhan.commands.uiConf.UiConfGet;
+	import com.borhan.config.BorhanConfig;
+	import com.borhan.events.BorhanEvent;
+	import com.borhan.net.TemplateURLVariables;
+	import com.borhan.upload.enums.KUploadStates;
+	import com.borhan.upload.errors.KsuError;
+	import com.borhan.upload.events.KUploadErrorEvent;
+	import com.borhan.upload.events.KUploadEvent;
+	import com.borhan.upload.vo.FileFilterVO;
+	import com.borhan.utils.KConfigUtil;
+	import com.borhan.vo.BorhanUiConf;
 	
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
@@ -49,7 +49,7 @@ package com.kaltura.upload.commands {
 
 
 		private function saveBaseFlashVars():void {
-			var config:KalturaConfig = new KalturaConfig();
+			var config:BorhanConfig = new BorhanConfig();
 			var hostFlashvar:String = _params.host;
 			var protocol:String;
 			var domain:String;
@@ -89,7 +89,7 @@ package com.kaltura.upload.commands {
 			config.ks = _params.ks;
 			config.partnerId = _params.partnerId;
 
-			model.context.kc = new KalturaClient(config);
+			model.context.kc = new BorhanClient(config);
 			model.context.subPartnerId = _params.partnerId;
 			model.context.userId = _params.uid;
 			model.context.partnerData = _params.partnerData;
@@ -125,8 +125,8 @@ package com.kaltura.upload.commands {
 		 * */
 		private function loadConfiguration():void {
 			var uiconfGet:UiConfGet = new UiConfGet(parseInt(model.uiConfId));
-			uiconfGet.addEventListener(KalturaEvent.COMPLETE, uiconfResult);
-			uiconfGet.addEventListener(KalturaEvent.FAILED, uiconfFault);
+			uiconfGet.addEventListener(BorhanEvent.COMPLETE, uiconfResult);
+			uiconfGet.addEventListener(BorhanEvent.FAILED, uiconfFault);
 			model.context.kc.post(uiconfGet);
 		}
 
@@ -137,8 +137,8 @@ package com.kaltura.upload.commands {
 		}
 
 
-		private function uiconfResult(event:KalturaEvent):void {
-			var result:KalturaUiConf = event.data as KalturaUiConf;
+		private function uiconfResult(event:BorhanEvent):void {
+			var result:BorhanUiConf = event.data as BorhanUiConf;
 			parseConfiguration(new XML(result.confFile));
 			saveConfigurationFlashVars();
 			kuploadReady();

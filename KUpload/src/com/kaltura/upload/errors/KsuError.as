@@ -1,4 +1,4 @@
-package com.kaltura.upload.errors
+package com.borhan.upload.errors
 {
 	/**
 	 * Enumeration of errors thrown by KSU, allows handling errors in code.

@@ -1,4 +1,4 @@
-package com.kaltura.upload.vo
+package com.borhan.upload.vo
 {
 	import flash.net.FileFilter;
 
